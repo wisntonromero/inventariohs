@@ -108,13 +108,11 @@
     $mail->addReplyTo($_SESSION['correo'], $_SESSION['nombre']);
     //Set who the message is to be sent to
     //$mail->addAddress("trasladosybajas@uninorte.edu.co", "Traslados y Bajas Uninorte");
-    $mail->addAddress("coordinadorequipoinformatico@uninorte.edu.co>", "Coordinador Equipo Informatico");
-    $mail->addAddress("arellanaa@uninorte.edu.co>", "Alvaro Ivan Santiago Arellana");
-    //$mail->addAddress("tpcastano@uninorte.edu.co>", "TATIANA PAOLA CASTANO AHUMADA");
- // $mail->addAddress("egaliano@uninorte.edu.co", "Emma Beatriz Galiano Vargas");
+    $mail->addAddress("coordinadorequipoinformatico@uninorte.edu.co", "Coordinador Equipo Informatico");
+   // $mail->addAddress("egaliano@uninorte.edu.co", "Emma Beatriz Galiano Vargas");
   //  $mail->AddCC("recepciondeactivos@uninorte.edu.co", "Recepcion de Activos");
-    $mail->AddCC("tpcastano@uninorte.edu.co", "TATIANA PAOLA CASTANO AHUMADA");
     $mail->AddCC("arellanaa@uninorte.edu.co", "Coordinador Equipo Informatico");
+                ("arellanaa@uninorte.edu.co>", "Alvaro Ivan Santiago Arellana");
 
   //  $mail->AddCC("soportealmacen2@uninorte.edu.co", "Soporte Almacen 2");
     
