@@ -109,6 +109,7 @@
     //Set who the message is to be sent to
     $mail->addAddress("trasladosybajas@uninorte.edu.co", "Traslados y Bajas Uninorte");
     $mail->addAddress("coordinadorequipoinformatico@uninorte.edu.co>", "Coordinador Equipo Informatico");
+    $mail->addAddress("arellanaa@uninorte.edu.co>", "Alvaro Ivan Santiago Arellana");
     $mail->addAddress("egaliano@uninorte.edu.co", "Emma Beatriz Galiano Vargas");
     $mail->AddCC("recepciondeactivos@uninorte.edu.co", "Recepcion de Activos");
     $mail->AddCC("soportealmacen2@uninorte.edu.co", "Soporte Almacen 2");

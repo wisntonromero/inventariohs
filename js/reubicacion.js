@@ -465,7 +465,7 @@ $('#btnmodificar_reubicacion').click(
         },
           success:function(data) {
             if(data = 1){
-              $('#res').html("Compra de activo modificado en el sistema.");
+              $('#res').html("Reubicación de activo modificado en el sistema.");
               $('#res').css('color','yellow');
               alert("Activo modificado en la base de datos de reubiacaciones.");
             }
@@ -478,7 +478,7 @@ $('#btnmodificar_reubicacion').click(
              alert("Activo modificado en la base de datos...");
              $('#res').html("Activo modificado en la base de datos...");
             //alert("Error el activo no puedo ser modificado en la base de datos.")
-            console.log('Something went wrong', status, 'Compra de activo no encontrada.' );
+            console.log('Something went wrong', status, 'Reubicación de activo no encontrada.' );
           }
         });
   }
