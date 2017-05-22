@@ -110,9 +110,11 @@
     //$mail->addAddress("trasladosybajas@uninorte.edu.co", "Traslados y Bajas Uninorte");
     $mail->addAddress("coordinadorequipoinformatico@uninorte.edu.co>", "Coordinador Equipo Informatico");
     $mail->addAddress("arellanaa@uninorte.edu.co>", "Alvaro Ivan Santiago Arellana");
-   // $mail->addAddress("egaliano@uninorte.edu.co", "Emma Beatriz Galiano Vargas");
+    $mail->addAddress("tpcastano@uninorte.edu.co>", "TATIANA PAOLA CASTANO AHUMADA");
+ // $mail->addAddress("egaliano@uninorte.edu.co", "Emma Beatriz Galiano Vargas");
   //  $mail->AddCC("recepciondeactivos@uninorte.edu.co", "Recepcion de Activos");
   //  $mail->AddCC("soportealmacen2@uninorte.edu.co", "Soporte Almacen 2");
+    $mail->AddCC("arellanaa@uninorte.edu.co>", "Alvaro Ivan Santiago Arellana");
     $mail->AddCC("$email_nuevo_responsable", "$nuevo_responsable");
     $mail->AddCC("$email_nuevo_usuario", "$nuevo_usuario");
     $mail->AddCC($_SESSION['correo'], $_SESSION['nombre']);
