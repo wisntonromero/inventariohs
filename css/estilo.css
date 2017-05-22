@@ -1,0 +1,50 @@
+body {
+    padding-left: 20em;
+    color: white;
+    background-color: black }
+
+    ul.navbar {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 16em;
+      left: 20em;
+      width: 9em }
+    
+    h1 {
+      font-family: Helvetica, Geneva, Arial,
+      SunSans-Regular, sans-serif }
+    
+    ul.navbar li {
+      background: #424242;
+      margin: 0.5em 0;
+      padding: 0.3em;
+      border-right: 1em solid black }
+    
+    ul.navbar a {
+      text-decoration: none }
+    
+    a:link {
+      color: white }
+    a:visited {
+      color: purple }
+    
+    address {
+      margin-top: 1em;
+      padding-top: 1em;
+      border-top: thin dotted }
+
+   	input.text, select.text, textarea.text {
+   		background: #424242;
+  	  border-width:0;
+  	   	
+  	  color: #F2F2F2;
+  	  font-size: 12px;
+  	  padding: 5px; }
+
+	   	STYLE="color: #F2F2F2; font-family: Verdana; font-weight: bold; font-size: 12px; border-width:0; background-color: #424242
+
+      body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;}
+.contact_form h2, .contact_form label {font-family:Georgia, Times, "Times New Roman", serif;}
+.form_hint, .required_notification {font-size: 11px;}

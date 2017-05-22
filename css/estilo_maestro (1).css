@@ -1,0 +1,155 @@
+head{
+text-align : center;
+font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+background-color: white;
+margin: 0;
+padding: 0;
+}
+
+/* esto es para colocar el furmulario uno al lado del otro */
+
+fieldset {
+   float: center;
+   width: 18%;
+   style= width: 35em; 
+}
+
+body {
+    font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+    background-color: lightgrey;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+.contenedor {
+    width: 80%;
+    max-width: 1260px;/* puede que sea conveniente una anchura máxima (max-width) para evitar que este diseño sea demasiado ancho en un monitor grande. Esto mantiene una longitud de línea más legible. IE6 no respeta esta declaración. */
+    min-width: 780px;/* puede que sea conveniente una anchura mínima (min-width) para evitar que este diseño sea demasiado estrecho. Esto permite que la longitud de línea sea más legible en las columnas laterales. IE6 no respeta esta declaración. */
+    background-color: white;
+    margin: 0 auto; /* el valor automático de los lados, unido a la anchura, centra el diseño. No es necesario si establece la anchura de .container en el 100%. */
+    padding: 10px 0;
+}
+
+.sendButton {
+    background: -moz-linear-gradient(90deg, #0459B7, #08ADFF) repeat scroll 0 0 transparent;
+    background: -webkit-linear-gradient(90deg, #0459B7, #08ADFF) repeat scroll 0 0 transparent;
+    border: 1px solid #093C75;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 0 #FFFFFF;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: -40em;
+    margin-top: 2em;
+    padding: 5px 50px;
+    text-decoration: none;
+    text-shadow: 0 1px 1px #333333;
+    text-transform: uppercase;
+}
+.resetButton {
+    background: -moz-linear-gradient(90deg, #0459B7, #08ADFF) repeat scroll 0 0 transparent;
+    background: -webkit-linear-gradient(90deg, #0459B7, #08ADFF) repeat scroll 0 0 transparent;
+    border: 1px solid #093C75;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 0 #FFFFFF;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 15em;
+    margin-top: 2em;
+    padding: 5px 50px;
+    text-decoration: none;
+    text-shadow: 0 1px 1px #333333;
+    text-transform: uppercase;
+}
+.loginButton:hover {
+            background: -moz-linear-gradient(90deg, #067CD3, #0BCDFF) repeat scroll 0 0 transparent;
+            background: -webkit-linear-gradient(90deg, #067CD3, #0BCDFF) repeat scroll 0 0 transparent;
+        border-color: #093C75;
+        text-decoration: none;
+}
+.loginButton:active {
+    background: -moz-linear-gradient(90deg, #0BCDFF, #067CD3) repeat scroll 0 0 transparent;
+    background: -webkit-linear-gradient(90deg, #0BCDFF, #067CD3) repeat scroll 0 0 transparent;
+    border-color: #093C75;
+    outline: medium none;;  
+}
+.loginWarning {
+    padding-top: 0.2em;
+    font-family: 'Aldrich', sans-serif;
+    color:#FE2E2E;
+    font-size: 12px;
+    font-weight: 400;
+}
+.loginField {
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-top: 1em;
+	border: 0;
+	background: -webkit-linear-gradient(90deg, #CCCCCC, #FFFFFF) repeat scroll 0 0 transparent;
+	background: -moz-linear-gradient(90deg, #CCCCCC, #FFFFFF) repeat scroll 0 0 transparent;
+	border: 1px solid #AAAAAA;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 0 15px #AAAAAA;
+	margin: 5px auto 0;
+	padding: 40px;
+}
+.loginField legend {
+    text-align: right;
+    background: -webkit-linear-gradient(90deg, #CCCCCC, #FFFFFF) repeat scroll 0 0 transparent;
+    background: -moz-linear-gradient(90deg, #CCCCCC, #FFFFFF) repeat scroll 0 0 transparent;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 15px #AAAAAA;
+    padding-right: 1em;
+    padding-left: 1em:
+}
+.loginField img {
+    max-width: 24px;
+}
+
+.loginVerticalPanel {
+    margin: 0 auto 0 auto;      
+}
+.loginVerticalPanel input {
+    background: -webkit-linear-gradient(90deg, #FFFFFF, #EEEEEE) repeat scroll 0 0 transparent;
+    background: -moz-linear-gradient(90deg, #FFFFFF, #EEEEEE) repeat scroll 0 0 transparent;
+    border: 1px solid #AAAAAA;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 3px #AAAAAA;
+    padding: 6px;
+}
+
+.styled-select select {
+	background: -webkit-linear-gradient(90deg, #FFFFFF, #EEEEEE) repeat scroll 0 0 transparent;
+	background: -moz-linear-gradient(90deg, #FFFFFF, #EEEEEE) repeat scroll 0 0 transparent;
+	width: 278px;
+	padding: 4px;
+	font-family: Arial,sans-serif;
+	font-size: 14px;
+	line-height: 1;
+	border: 3;
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: 0 0 15px #AAAAAA;
+	height: 28px;
+	background-color: #FFF;
+}
+
+.styled-select {
+   width: 280px;
+   height: 28px;
+   overflow: hidden;
+   background: -webkit-linear-gradient(90deg, #CCCCCC, #FFFFFF) repeat scroll 0 0 transparent;
+   background: -moz-linear-gradient(90deg, #CCCCCC, #FFFFFF) repeat scroll 0 0 transparent;
+   border: 1px solid #ccc;
+}
+
+
+input:focus {
+	border: 2px solid #000;
+	background-color: #33CCFF;
+}

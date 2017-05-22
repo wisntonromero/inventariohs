@@ -1,0 +1,107 @@
+img {
+	border:none;
+	outline:none;
+}
+a {
+	text-decoration:none;
+}
+/*.as_wrapper{
+	margin:0 auto;
+	width:750px;
+	font-family:Arial;
+	color:#333;
+	font-size:14px;
+	padding:20px;
+	border:2px dashed #17A3F7;
+}*/
+.h1 a {
+	text-decoration:none;
+	color:#000;
+}
+.h1 a:hover {
+	text-decoration:underline;
+}
+.as_gridder_table {
+	border-collapse:collapse;
+	border:#c9e7e9 solid 1px;
+}
+.as_gridder_table tr.grid_header {
+	font-weight:bold;
+	background:#c9e7e9;
+}
+.as_gridder_table tr.odd {
+	background-color:#fffeff;
+	-webkit-transition: background-color 0.5s ease-out;
+	-moz-transition: background-color 0.5s ease-out;
+	-o-transition: background-color 0.5s ease-out;
+	transition: background-color 0.5s ease-out;
+}
+.as_gridder_table tr.even {
+	background-color:#dafaf9;
+	-webkit-transition: background-color 0.5s ease-out;
+	-moz-transition: background-color 0.5s ease-out;
+	-o-transition: background-color 0.5s ease-out;
+	transition: background-color 0.5s ease-out;
+}
+.as_gridder_table tr.odd:hover, .as_gridder_table tr.even:hover, .as_gridder_table tr.odd.active, .as_gridder_table tr.odd.active {
+	background:#75E4F9;
+}
+.as_gridder_table tr td {
+	vertical-align:middle;
+	height:40px;
+}
+.grid_heading {
+	display:block;
+	padding:8px 4px;
+}
+.grid_content {
+	display:block;
+	padding:8px 4px;
+	min-height:22px;
+}
+.grid_content.sno {
+	width:auto;
+}
+.grid_content span {
+	padding:3px 0px;
+	position:relative;
+	top:5px;
+}
+.grid_content.editable {
+	width:110px;
+}
+.gridder_input, .gridder_add {
+	display:none;
+	margin:0;
+	padding:0;
+	outline:none;
+	border:none;
+	padding:2px;
+	border:#24E2F2 solid 1px;
+	width:100px;
+	height:18px;
+}
+.gridder_add {
+	display:block;
+	border:#CCCCCC solid 1px;
+}
+.gridder_input.select, .gridder_add.select {
+	height:auto;
+}
+.gridder_input:hover, .gridder_input:active, .gridder_add:hover, .gridder_add:active {
+	outline:none;
+}
+#addnew {
+	display:none;
+}
+.gridder_addrecord_button {
+	margin:0;
+	padding:0;
+	outline:none;
+	border:none;
+	background:url(../images/tick.png) no-repeat;
+	cursor:pointer;
+	display:inline-block;
+	height:16px;
+	width:16px;
+}
