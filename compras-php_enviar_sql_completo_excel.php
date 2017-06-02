@@ -49,7 +49,7 @@ mysql_select_db($database);
 
 //$query = "SELECT compras.com_orden_de_compra, tipos_equipo.tip_descripcion, marcas.mar_descripcion, com_modelo_equipo, prioridades.pri_descripcion, com_activo_equipo, com_serial_equipo, centros_de_costos.cen_descripcion, com_activo_monitor, com_serial_monitor, estado.est_descripcion, com_activo_equipo_retirar, com_activo_monitor_retirar, procesos.pro_descripcion, com_responsable, com_usuario, com_extension, com_bloque, com_piso, com_cubiculo, com_dir_ip, com_dir_mac, com_punto_de_red, com_ot_sigma, com_observaciones from compras,tipos_equipo,marcas,prioridades,centros_de_costos,estado, procesos WHERE com_orden_de_compra like '%$orden_de_compra%' AND compras.com_marca_equipo = mar_id AND compras.com_tipo_equipo = tip_id AND com_prioridad = prioridades.pri_id AND com_centro_costo = centros_de_costos.cen_id AND com_estado_equipo = estado.est_id AND com_proceso_equipo = procesos.pro_id";
 
-$query = "SELECT compras.com_orden_de_compra AS orden_de_compra, tipos_equipo.tip_descripcion AS tipo_de_equipo, 
+$query = "SELECT compras.com_orden_de_compra AS orden_de_compra, compras.com_f_ult_actualizacion AS Fecha_de_actualizacion, tipos_equipo.tip_descripcion AS tipo_de_equipo, 
 marcas.mar_descripcion AS marca_de_equipo, com_modelo_equipo AS modelo_equipo, prioridades.pri_descripcion AS prioridad_del_equipo, 
 com_activo_equipo AS activo_equipo, com_serial_equipo AS serial_del_equipo, com_activo_monitor AS activo_monitor, com_serial_monitor AS serial_monitor,
 estado.est_descripcion AS estado_del_equipo, com_activo_equipo_retirar AS activo_equipo_a_retirar, com_activo_monitor_retirar AS activo_monitor_a_retirar,
