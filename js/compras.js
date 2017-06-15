@@ -351,6 +351,7 @@ $('#btnmodificar_compra_enviar_email').click(
   function()
   {
         $("#capa_btn_guardar_enviar_email").css("display", "none");
+        
         if($('#email_responsable').val()==""){
           alert("Introduce el email del responsable del equipo");
           $("#capa_btn_guardar_enviar_email").css("display", "block");
@@ -453,7 +454,7 @@ $('#btnmodificar_compra_enviar_email').click(
         }
 
         if($('#ot_sigma').val()==""){
-          alert("Introduce la Ot de Sigma");
+          alert("Introduce la Ot de Servicio");
           $("#capa_btn_guardar_enviar_email").css("display", "block");
           return false;
         }
@@ -575,7 +576,7 @@ $('.activo_equipo').focusout(
   });
 });
 
-$('.email_responsable').focusout(
+$('email_responsable').focusout(
   function() {
   //  $('#send').click(function(){
         if($("#email_responsable").val().indexOf('@uninorte.edu.co', 0) == -1 || $("#email_responsable").val().indexOf('.', 0) == -1) {
@@ -587,7 +588,7 @@ $('.email_responsable').focusout(
   //  });
 });
 
-$('.email_usuario').focusout(
+$('email_usuario').focusout(
   function() {
   //  $('#send').click(function(){
         if($("#email_usuario").val().indexOf('@uninorte.edu.co', 0) == -1 || $("#email_usuario").val().indexOf('.', 0) == -1) {

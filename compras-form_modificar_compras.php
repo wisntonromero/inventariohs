@@ -330,16 +330,16 @@ include_once("sesion.php");
 		<div id="prueba" class="row">
 	    	<div class="columns large-4">
 		        <label for="email_responsable">E-mail Responsable</label>
-		        <input type="text" name="email_responsable"  class= "email_responsable" id="email_responsable" pattern="/^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/" style="color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px;" value="@uninorte.edu.co" placeholder="Obligatorio e-mail del responsable">
+		        <input type="text" name="email_responsable"  id="email_responsable" pattern="/^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/" style="color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px;" value="@uninorte.edu.co" placeholder="Obligatorio e-mail del responsable">
 		    </div>
 
  			<div class="columns large-4">
 		        <label for="email_usuario">E-mail Usuario</label>
-		        <input type="text" name="email_usuario" class= "email_usuario" id="email_usuario" pattern="/^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/" style="color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px;" value="@uninorte.edu.co" placeholder="Obligatorio e-mail del usuario" >
+		        <input type="text" name="email_usuario" id="email_usuario" pattern="/^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/" style="color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px;" value="@uninorte.edu.co" placeholder="Obligatorio e-mail del usuario" >
 		    </div>
 
 		    <div class="columns large-4">
-		        <input type="hidden" name="l_usuario" id="email_usuario" value="" placeholder="Obligatorio Ot de sigma" >
+		        <input type="hidden" name="l_usuario" id="l_usuario" value="" placeholder="Obligatorio Ot de sigma" >
 		    </div>
 
 		    <marquee scrolldelay="700" scrollamount="100">
@@ -362,7 +362,6 @@ include_once("sesion.php");
 		        <label for="cubiculo">Cubiculo</label>
 		        <input type="text" name="cubiculo" id="cubiculo" style="text-transform: uppercase;" value="" placeholder="Obligatorio cubiculo">
 		    </div>
-
 	    </div>
 
 	    <!--  ************************************************************* INICIO  DE RED  DEL EQUIPO  *********************************************************************** -->
@@ -386,11 +385,11 @@ include_once("sesion.php");
 
  			<div class="columns large-2">
 		        <label for="ot_sigma">Ot de Aranda.</label>
-		        <input type="text" name="ot_sigma" id="ot_sigma" style="text-transform: uppercase;" value="" style="color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px" placeholder="Obligatorio Ot de sigma">
+		        <input type="text" name="ot_sigma" id="ot_sigma" style="text-transform: uppercase;" value="" style="color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px" placeholder="Obligatorio Ot de Aranda">
 		    </div>
 
 		    <marquee scrolldelay="700" scrollamount="100">
-				<font color="red"><b> No olvidar colocar la información de red del equipo y ot de sigma.</b></font>
+				<font color="red"><b> No olvidar colocar la información de red del equipo y ot de Aranda.</b></font>
 			</marquee>
 
 		    <div class="columns large-12">
@@ -424,6 +423,11 @@ include_once("sesion.php");
 	         <div class="columns large-2">
 	            <label for="mmmm">&nbsp;</label>
 	            <input type="hidden" href="compras-form_ingresar_compras.php" name="limpiar_forma" id="limpiar_forma" value="Limpiar formulario" class="button">
+	        </div>
+
+	         <div class="columns large-2">
+	            <label for="enviar-post">&nbsp;</label>
+	            <input type="button" name="enviar-post" id="enviar-post" value="Enviar post" class="button">
 	        </div>
 	    </div>
 	</form>
