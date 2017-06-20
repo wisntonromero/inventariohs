@@ -338,15 +338,110 @@ include_once("sesion.php");
 		        <input type="text" name="email_usuario" id="email_usuario" pattern="/^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/" style="color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px;" value="@uninorte.edu.co" placeholder="Obligatorio e-mail del usuario" >
 		    </div>
 
-		    <div class="columns large-4">
-		        <input type="hidden" name="l_usuario" id="l_usuario" value="" placeholder="Obligatorio Ot de sigma" >
-		    </div>
+		   <div class="columns large-4">
+	        	<label for="departamento">Departamento</label>
+	        	<input type="text" name="departamento" id="departamento" style="text-transform: uppercase; color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px;" value="" placeholder="Obligatorio departamento">
+	      </div>
 
 		    <marquee scrolldelay="700" scrollamount="100">
 				<font color="red"><b> No olvidar colocar los correos del responsable y el usuario final del equipo.</b></font>
 			</marquee>
 		</div>
 	<!--  ************************************************ FIN DE E-MAIL                ********************************************************** -->
+
+
+	    <!--  ************************************************************* INICIO  DE RED  DEL EQUIPO  *********************************************************************** -->
+
+		<div id="prueba2" class="row">
+	    	<h4> Información de red del equipo. Ip - Mac - Punto de red. </h4>
+		    <div class="columns large-3">
+		    	<label for="dir_ip">Dirección Ip el pc</label>
+		        <input type="text" name="dir_ip" id="dir_ip" onkeypress="return solonumeros(event)" value="000.000.000.000" style="color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px" placeholder="Obligatorio ip del equipo">
+		    </div>
+
+		    <div class="columns large-3">
+		        <label for="dir_mac">Dirección Mac del pc</label>
+		        <input type="text" name="dir_mac" id="dir_mac" style="text-transform: uppercase;" value="AA-AA-AA-AA-AA-AA" onkeypress="return solohexadecimal(event)" style="color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px" placeholder="Obligatorio Mac">
+		    </div>
+
+		    <div class="columns large-2">
+		        <label for="punto_de_red">Punto de red.</label>
+		        <input type="text" name="punto_de_red" id="punto_de_red" style="text-transform: uppercase;" value="NO TIENE" onkeypress="return letrasynumeros(event)"  style="color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px" placeholder="Obligatorio punto de red">
+		    </div>
+
+			<div class="columns large-2">
+		    	<label for="consultar_punto_de_red">&nbsp;</label>
+		        <input type="button" name="consultar_punto_de_red" id="consultar_punto_de_red" value="Consultar" class="button">
+		    </div>
+
+ 			<div class="columns large-2">
+		        <label for="ot_sigma">Ot de Aranda.</label>
+		        <input type="text" name="ot_sigma" id="ot_sigma" value="" onkeypress="return letrasynumeros(event)" style="text-transform: uppercase; color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px;"  placeholder="Obligatorio Ot de Aranda">
+		    </div>
+	    </div>
+
+
+		
+		<div id="capa_red" class="row">
+		    <div class="columns large-8">
+          		<label for="seleccionar_switches">Ip Switch</label>
+         		<select name="seleccionar_switches_puertos" disabled id="seleccionar_switches_puertos">
+	                <option selected="selected">----- Seleccionar Switch ---</option>
+	                <?php
+	                    include_once("config.php");
+	                    $conexion = mysql_connect($server,$username,$password);
+	                    mysql_set_charset('utf8',$conexion);
+	                    mysql_select_db($database);
+	                      $sw_id     = $_POST['sw_id'];
+	                      $nro_cc    = $_POST['nro_cc'];
+	                      $bit_sw_id = $_POST['bit_sw_id'];
+	                      $dir_ip_sw = $_POST['dir_ip_sw'];
+	                      $unidad    = $_POST['unidad'];
+	                    
+	                    $query = "SELECT switches.sw_id, switches.nro_cc, switches.dir_ip_sw, switches.unidad, bitacora_switches.bit_sw_id, bitacora_switches.puerto_sw, bitacora_switches.vlan, bitacora_switches.punto_de_red, bitacora_switches.estado_puerto_sw 
+	                    FROM bitacora_switches LEFT JOIN switches ON switches.sw_id = bitacora_switches.id_sw  GROUP BY nro_cc, dir_ip_sw, puerto_sw ASC";
+
+	                    $resultado = mysql_query($query,$conexion);
+	                    $numero_de_filas = mysql_num_rows($resultado);
+	                    while($registro=mysql_fetch_array($resultado))
+	                    {
+	                      $sw_id            = $registro['sw_id'];
+	                      $bit_sw_id        = $registro['bit_sw_id'];
+	                      $nro_cc           = $registro['nro_cc'];
+	                      $unidad           = $registro['unidad'];
+	                      $dir_ip_sw        = $registro['dir_ip_sw'];
+	                      $puerto_sw        = $registro['puerto_sw'];
+	                      $estado_puerto_sw = $registro['estado_puerto_sw'];
+	                         
+	                      echo '<option value="'.$bit_sw_id.'">'."Nro CC: ".''.$nro_cc.''." - Ip Sw: ".''.$dir_ip_sw.''." - Unidad: ".''.$unidad.''." - Puerto Sw: ".''.$puerto_sw.''." - Estado: ".''.$estado_puerto_sw.'</option>';
+	                    } 
+	                ?>
+        		</select> <br/><br/>
+      		</div>
+
+      		<div class="columns large-3">
+		   		<input type="hidden" name="dir_ip_sw" id="dir_ip_sw" value="" placeholder="dir ip sw">
+			</div>
+	    
+	    	<div class="columns large-2">
+    			<input type="hidden" name="puerto_sw" id="puerto_sw" value=""  placeholder="puerto sw">
+      		</div>
+      		
+
+	      	<div class="columns large-2">
+	       	 	<label for="vlan_puerto_sw">Vlan</label>
+	       	 	<input type="text" name="vlan_puerto_sw" id="vlan_puerto_sw" value="" placeholder="Suministrada por el sistema">
+	      	</div>
+
+	      	<div class="columns large-2">
+	         	<label for="estado_puerto_sw">Estado Puerto Sw</label>
+	        	<input type="text" name="estado_puerto_sw" id="estado_puerto_sw" value="" placeholder="Obligatorio estado puerto sw" style="text-transform:uppercase;">
+	      	</div>
+
+	      	<marquee scrolldelay="700" scrollamount="100">
+				<font color="red"><b> No olvidar colocar la información de red del equipo y ot de Aranda.</b></font>
+			</marquee>
+		</div>
 
 		<div class="row">
 		    <h4> Información de la ubicación del equipo</h4>
@@ -364,39 +459,15 @@ include_once("sesion.php");
 		    </div>
 	    </div>
 
-	    <!--  ************************************************************* INICIO  DE RED  DEL EQUIPO  *********************************************************************** -->
+	    <div class="row">
 
-		<div id="prueba2" class="row">
-	    	<h4> Información de red del equipo. Ip - Mac - Punto de red. </h4>
-		    <div class="columns large-3">
-		    	<label for="dir_ip">Dirección Ip el pc</label>
-		        <input type="text" name="dir_ip" id="dir_ip" onkeypress="return solonumeros(event)" value="000.000.000.000" style="color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px" placeholder="Obligatorio ip del equipo">
-		     </div>
-
-		    <div class="columns large-3">
-		        <label for="dir_mac">Dirección Mac del pc</label>
-		        <input type="text" name="dir_mac" id="dir_mac" style="text-transform: uppercase;" value="AA-AA-AA-AA-AA-AA" onkeypress="return solohexadecimal(event)" style="color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px" placeholder="Obligatorio Mac">
-		    </div>
-
-		    <div class="columns large-2">
-		        <label for="punto_de_red">Punto de red.</label>
-		        <input type="text" name="punto_de_red" id="punto_de_red" style="text-transform: uppercase;" value="NO TIENE" onkeypress="return letrasynumeros(event)"  style="color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px" placeholder="Obligatorio punto de red">
-		    </div>
-
- 			<div class="columns large-2">
-		        <label for="ot_sigma">Ot de Aranda.</label>
-		        <input type="text" name="ot_sigma" id="ot_sigma" style="text-transform: uppercase;" value="" style="color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px" placeholder="Obligatorio Ot de Aranda">
-		    </div>
-
-		    <marquee scrolldelay="700" scrollamount="100">
-				<font color="red"><b> No olvidar colocar la información de red del equipo y ot de Aranda.</b></font>
-			</marquee>
-
-		    <div class="columns large-12">
-			    <label for="observaciones">Observaciones </label>
-			    <input type="text" name="observaciones" id="observaciones" style="text-transform: uppercase;" value="" style="color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px" placeholder="Opcional">
-			</div>
+	    <div class="columns large-12">
+			<label for="observaciones">Observaciones </label>
+			<input type="text" name="observaciones" id="observaciones" style="text-transform: uppercase;" value="" style="color: blue; font-family: Verdana; border-color:red; font-weight: bold; font-size: 15px" placeholder="Opcional">
 		</div>
+
+		</div>
+
 
 	    <!-- ********************************************************** BOTONES ************************************************************* -->
 	    <div class="row">
@@ -425,16 +496,17 @@ include_once("sesion.php");
 	            <input type="hidden" href="compras-form_ingresar_compras.php" name="limpiar_forma" id="limpiar_forma" value="Limpiar formulario" class="button">
 	        </div>
 
-	         <div class="columns large-2">
-	            <label for="enviar-post">&nbsp;</label>
-	            <input type="button" name="enviar-post" id="enviar-post" value="Enviar post" class="button">
-	        </div>
+	        <div class="columns large-2">
+          		<label for="enviar_mail_equipo_nuevo">&nbsp;</label>
+          		<input type="button" name="enviar_mail_equipo_nuevo" id="enviar_mail_equipo_nuevo" value="Reserva de IP" class="button">
+        	</div>
 	    </div>
 	</form>
 	<!-- *******************************************************FIN BOTONES ************************************************************* -->
 	<script src="js/vendor/jquery.js"></script>
   	<script src="js/foundation.min.js"></script>
 	<script src="js/compras.js"></script>
+	<script src="js/activo.js"></script>
 	<script src="js/marcas.js"></script>
 	<script src="js/tipo_equipo.js"></script>
 	<script src="js/prioridades.js"></script>
@@ -442,6 +514,9 @@ include_once("sesion.php");
 	<script src="js/proceso.js"></script>
 	<script src="js/estado.js"></script>
 	<script src="js/usuario.js"></script>
+	<script src="js/red.js"></script>
+	<script src="js/switches.js"></script>
+	<script src="js/correo.js"></script>
 	<script>
     	$(document).foundation();
   	</script>

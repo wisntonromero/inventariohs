@@ -32,7 +32,7 @@
     $observaciones          = $_POST['observaciones'];
 
    $query = "INSERT INTO compras(com_orden_de_compra,com_tipo_equipo, com_marca_equipo, com_modelo_equipo,com_prioridad,com_activo_equipo,com_serial_equipo,com_centro_costo,com_activo_monitor, com_serial_monitor, com_estado_equipo, com_activo_equipo_retirar, com_activo_monitor_retirar, com_proceso_equipo, com_responsable, com_usuario,com_extension, com_dir_ip, com_dir_mac, com_ot_sigma, com_punto_de_red, com_bloque, com_piso,com_cubiculo, com_observaciones) 
-                            VALUES ('$orden_de_compra','$id_tip', '$id_mar','$modelo_equipo','$id_pri','$activo_equipo','$serial_equipo','$id_cen','$activo_monitor', '$serial_monitor','1', '$activo_equipo_retirar', '$activo_monitor_retirar', '$id_pro', '$responsable', '$usuario', '$ext_tel', '000.000.000.000', 'AA-AA-AA-AA-AA-AA', '2015-', 'NO TIENE',  '$bloque', '$piso', '$cubiculo','$observaciones')";
+                            VALUES ('$orden_de_compra','$id_tip', '$id_mar','$modelo_equipo','$id_pri','$activo_equipo','$serial_equipo','$id_cen','$activo_monitor', '$serial_monitor','1', '$activo_equipo_retirar', '$activo_monitor_retirar', '$id_pro', '$responsable', '$usuario', '$ext_tel', '000.000.000.000', 'AA-AA-AA-AA-AA-AA', '', 'NO TIENE',  '$bloque', '$piso', '$cubiculo','$observaciones')";
    $resultado1 = mysql_query($query,$conexion); 
    
    $query  = "INSERT INTO bitacoras(bit_cod_estado,bit_fecha_estado,bit_activo,bit_usuario) VALUES('1',NOW(),'$activo_equipo',upper('$user'))" or die("Error in the consult.." . mysqli_error($query)); 

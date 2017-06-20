@@ -25,7 +25,7 @@ $('#consultar_punto_de_red').click(
 
         $('#seleccionar_switches_puertos').val( data['bit_sw_id'] );
         $('#sw_id').val( data['sw_id'] );
-        //$('#dir_ip_sw').val( data['dir_ip_sw'] );
+        $('#dir_ip_sw').val( data['dir_ip_sw'] );
         $('#puerto_sw').val( data['puerto_sw'] );
         $('#punto_de_red_actual').val( data['punto_de_red_actual'] );
         $('#vlan_puerto_sw').val( data['vlan_puerto_sw'] );

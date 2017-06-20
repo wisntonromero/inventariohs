@@ -613,7 +613,7 @@ $('#enviar_mail_equipo_nuevo').click(
                   },
                   error:function() {
                     //alert("Activo no encontrado modulo mail.")
-                    $('#res').html("---- El mensaje se envio al usuario, pero con algun error. ----");
+                    $('#res').html("---- El mensaje se envio al usuario. ----");
                     console.log('Something went wrong', status, 'Activo no encontrado.' );
                   }
                 });

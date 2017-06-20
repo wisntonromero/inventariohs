@@ -213,8 +213,6 @@ $('#btn_exportar_equipo_reubicado').click(
   });
 
 
-
-
 $('#btningresar_reubicacion').click(
   function()
   {

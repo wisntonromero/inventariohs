@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $("#prueba").css("display", "none");
   $("#prueba2").css("display", "none");
+  $("#capa_red").css("display", "none");
   $("#capa_btn_guardar_enviar_email").css("display", "none");
   $("#capa_btn_guardar").css("display", "block");
   $("#capa_btn_ingresar").css("display", "block");
@@ -57,12 +58,19 @@ $('#btnconsultar_activo_compra').click(
             $('#dir_ip').val( data['dir_ip'] );
             $('#dir_mac').val( data['dir_mac'] );
             $('#punto_de_red').val( data['punto_de_red'] );
+            $('#vlan_puerto_sw').val( data['vlan_puerto_sw'] );
+            $('#seleccionar_switches_puertos').val( data['bit_sw_id'] );
+            $('#dir_ip_sw').val( data['dir_ip_sw'] );
+            $('#puerto_sw').val( data['puerto_sw'] );
+            $('#ubicacion_p_red').val( data['ubicacion_p_red'] );
+
             $('#ot_sigma').val( data['ot_sigma'] );
             $('#observaciones').val( data['observaciones'] );
             $('#f_ult_actualizacion').val( data['f_ult_actualizacion'] );
 
             $("#prueba").css("display", "none");
             $("#prueba2").css("display", "none");
+            $("#capa_red").css("display", "block");
             $("#capa_btn_guardar_enviar_email").css("display", "none");
             $("#capa_btn_guardar").css("display", "block");
 
@@ -344,8 +352,6 @@ $('#btnmodificar_compra').click(
         });
   }
 );
-
-
 
 $('#btnmodificar_compra_enviar_email').click(
   function()
