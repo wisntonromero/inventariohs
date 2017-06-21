@@ -617,7 +617,7 @@ $('#punto_de_red').focusout(
           },
           success:function(data) {
            if ( jQuery.isEmptyObject(data) == false ){
-              $('#res').html("Orden de compra modificada en el sistema.");
+              $('#res').html("Punto de red encontrado...");
               $('#res').css('color','yellow');
             }
             /*else{
@@ -629,8 +629,8 @@ $('#punto_de_red').focusout(
             }*/
           },
           error:function() {
-            alert("Punto de red NO existe en la base de datos, por favor verificar el punto der red.");
-            $("#punto_de_red").focus();
+            alert("Punto de red NO existe en la base de datos, por favor verificar el punto de red.");
+            //$("#punto_de_red").focus();
          //   console.log('Something went wrong', status, 'Consola - Punto de red no existe en la base de datos, por favor verificar el punto der red.' );
           }
 

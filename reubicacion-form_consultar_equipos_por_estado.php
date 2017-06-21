@@ -70,8 +70,8 @@ include_once("sesion.php");
           </div>
 
           <div class="columns large-4">
-            <label for="responsable">Responsable anterior</label>
-            <input type="text" name="responsable" id="responsable" placeholder="Obligatorio " value="" onkeypress="return letrasynumeros(event)" style="text-transform:uppercase;" >
+            <label for="responsable_actual">Responsable anterior</label>
+            <input type="text" name="responsable_actual" id="responsable_actual" placeholder="Obligatorio " value="" onkeypress="return letrasynumeros(event)" style="text-transform:uppercase;" >
           </div>
 
           <div class="columns large-4">
@@ -80,8 +80,8 @@ include_once("sesion.php");
           </div>
 
           <div class="columns large-4">
-            <label for="nuevo_responsable">Nuevo responsable</label>
-            <input type="text" name="nuevo_responsable" id="nuevo_responsable" placeholder="Obligatorio " value="" onkeypress="return letrasynumeros(event)" style="text-transform:uppercase;">
+            <label for="responsable">Nuevo responsable</label>
+            <input type="text" name="responsable" id="responsable" placeholder="Obligatorio " value="" onkeypress="return letrasynumeros(event)" style="text-transform:uppercase;">
           </div>
 
           <div class="columns large-4">
@@ -159,9 +159,9 @@ include_once("sesion.php");
               activo_monitor: $('#activo_monitor').val(),
               activo_equipo_retirar: $('#activo_equipo_retirar').val(),
               activo_monitor_a_retirar: $('#activo_monitor_a_retirar').val(),
-              responsable: $('#responsable').val(),
+              responsable_actual: $('#responsable_actual').val(),
               usuario_anterior: $('#usuario_anterior').val(),
-              nuevo_responsable: $('#nuevo_responsable').val(),
+              responsable: $('#responsable').val(),
               nuevo_usuario: $('#nuevo_usuario').val(),
               id_est: $('#id_est').val(),
             },

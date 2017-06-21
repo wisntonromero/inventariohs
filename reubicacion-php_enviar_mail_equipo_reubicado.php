@@ -15,23 +15,23 @@
     $id_pri                 = $_POST['id_pri'];
     $id_est                 = $_POST['estado_equipo'];
 
-    $responsable            = $_POST['responsable'];
+    $responsable_actual     = $_POST['responsable_actual'];
     $usuario                = $_POST['usuario'];
 
-    $bloque                 = $_POST['bloque'];
-    $piso                   = $_POST['piso'];
-    $cubiculo               = $_POST['cubiculo'];
+    $bloque_actual          = $_POST['bloque_actual'];
+    $piso_actual            = $_POST['piso_actual'];
+    $cubiculo_actual        = $_POST['cubiculo_actual'];
 
     $activo_equipo_retirar  = $_POST['activo_equipo_retirar'];
     $activo_monitor_retirar = $_POST['activo_monitor_retirar'];
     $id_pro                 = $_POST['id_pro'];
     $proceso_equipo_retirar = $_POST['proceso_equipo_retirar'];
 
-    $nuevo_responsable      = $_POST['nuevo_responsable'];
+    $responsable            = $_POST['responsable'];
     $nuevo_usuario          = $_POST['nuevo_usuario'];
-    $nuevo_bloque           = $_POST['nuevo_bloque'];
-    $nuevo_piso             = $_POST['nuevo_piso'];
-    $nuevo_cubiculo         = $_POST['nuevo_cubiculo'];
+    $bloque                 = $_POST['bloque'];
+    $piso                   = $_POST['piso'];
+    $cubiculo               = $_POST['cubiculo'];
     $nuevo_dir_ip           = $_POST['nuevo_dir_ip'];
     $dir_mac                = $_POST['dir_mac'];
     $nuevo_punto_de_red     = $_POST['nuevo_punto_de_red'];
@@ -89,12 +89,12 @@ $mail->Body = 	'Favor hacer reserva de IP por cambio de equipo : '. "\r\n" . "\r
 				'Dirección IP 			: '. "$nuevo_dir_ip". "\r\n" .
 				'Dirección Mac 			: '. "$dir_mac". "\r\n" .
 				'Punto de red 			: '. "$nuevo_punto_de_red". "\r\n" .
-				'Responsable del equipo : '. "$nuevo_responsable". "\r\n" .
+				'Responsable del equipo : '. "$responsable". "\r\n" .
                 'Usuario del equipo 	: '. "$nuevo_usuario". "\r\n" .
 				//'Departamento 			: '. "$departamento". "\r\n" .
-				'Bloque 				: '. "$nuevo_bloque". "\r\n" .
-				'Piso 					: '. "$nuevo_piso". "\r\n" .
-				'Ubicación 				: '. "$nuevo_cubiculo". "\r\n" .
+				'Bloque 				: '. "$bloque". "\r\n" .
+				'Piso 					: '. "$piso". "\r\n" .
+				'Ubicación 				: '. "$cubiculo". "\r\n" .
 				//'Dirección ip sw 		: '. "$dir_ip_sw". "\r\n" .
 				//'Puerto en el sw 		: '. "$puerto_sw". "\r\n" .
 				//'Vlan Puerto en el sw 	: '. "$vlan_puerto_sw". "\r\n" . "\r\n" .

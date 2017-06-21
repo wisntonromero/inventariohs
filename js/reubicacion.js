@@ -34,11 +34,11 @@ $('#consultar_reubicacion').click(
             $('#id_est').val( data['estado_equipo'] );
             $('#seleccionar_prioridad').val( data['prioridad'] );
             $('#id_pri').val( data['prioridad'] );
-            $('#responsable').val( data['responsable'] );
+            $('#responsable_actual').val( data['responsable_actual'] );
             $('#usuario').val( data['usuario'] );
-            $('#bloque').val( data['bloque'] );
-            $('#piso').val( data['piso'] );
-            $('#cubiculo').val( data['cubiculo'] );
+            $('#bloque_actual').val( data['bloque_actual'] );
+            $('#piso_actual').val( data['piso_actual'] );
+            $('#cubiculo_actual').val( data['cubiculo_actual'] );
 
             $('#dir_ip').val( data['dir_ip'] );
             $('#dir_mac').val( data['dir_mac'] );
@@ -50,16 +50,16 @@ $('#consultar_reubicacion').click(
             $('#id_pro').val( data['id_pro'] );
             $('#proceso_equipo_retirar').val( data['proceso_equipo_retirar'] );
 
-            $('#nuevo_responsable').val( data['nuevo_responsable'] );
+            $('#responsable').val( data['responsable'] );
             $('#email_nuevo_responsable').val( data['email_nuevo_responsable'] );
             $('#nuevo_usuario').val( data['nuevo_usuario'] );
             $('#email_nuevo_usuario').val( data['email_nuevo_usuario'] );
             $('#nuevo_ext_tel').val( data['nuevo_ext_tel'] );
 
 
-            $('#nuevo_bloque').val( data['nuevo_bloque'] );
-            $('#nuevo_piso').val( data['nuevo_piso'] );
-            $('#nuevo_cubiculo').val( data['nuevo_cubiculo'] );
+            $('#bloque').val( data['bloque'] );
+            $('#piso').val( data['piso'] );
+            $('#cubiculo').val( data['cubiculo'] );
 
             $('#nuevo_dir_ip').val( data['nuevo_dir_ip'] );
             $('#nuevo_dir_mac').val( data['nuevo_dir_mac'] );
@@ -139,11 +139,11 @@ $('#btn_exportar_equipo_reubicado').click(
             $('#id_est').val( data['estado_equipo'] );
             $('#seleccionar_prioridad').val( data['prioridad'] );
             $('#id_pri').val( data['prioridad'] );
-            $('#responsable').val( data['responsable'] );
+            $('#responsable_actual').val( data['responsable_actual'] );
             $('#usuario').val( data['usuario'] );
-            $('#bloque').val( data['bloque'] );
-            $('#piso').val( data['piso'] );
-            $('#cubiculo').val( data['cubiculo'] );
+            $('#bloque_actual').val( data['bloque_actual'] );
+            $('#piso_actual').val( data['piso_actual'] );
+            $('#cubiculo_actual').val( data['cubiculo_actual'] );
 
             $('#dir_ip').val( data['dir_ip'] );
             $('#dir_mac').val( data['dir_mac'] );
@@ -154,16 +154,16 @@ $('#btn_exportar_equipo_reubicado').click(
             $('#seleccionar_proceso').val( data['id_pro'] );
             $('#proceso_equipo_retirar').val( data['proceso_equipo_retirar'] );
 
-            $('#nuevo_responsable').val( data['nuevo_responsable'] );
+            $('#responsable').val( data['responsable'] );
             $('#email_nuevo_responsable').val( data['email_nuevo_responsable'] );
             $('#nuevo_usuario').val( data['nuevo_usuario'] );
             $('#email_nuevo_usuario').val( data['email_nuevo_usuario'] );
             $('#nuevo_ext_tel').val( data['nuevo_ext_tel'] );
 
 
-            $('#nuevo_bloque').val( data['nuevo_bloque'] );
-            $('#nuevo_piso').val( data['nuevo_piso'] );
-            $('#nuevo_cubiculo').val( data['nuevo_cubiculo'] );
+            $('#bloque').val( data['bloque'] );
+            $('#piso').val( data['piso'] );
+            $('#cubiculo').val( data['cubiculo'] );
 
             $('#nuevo_dir_ip').val( data['nuevo_dir_ip'] );
             $('#nuevo_dir_mac').val( data['nuevo_dir_mac'] );
@@ -314,14 +314,14 @@ $('#btningresar_reubicacion').click(
 
       var id_est                  = $('#id_est').val();
       var modelo_equipo           = $('#modelo_equipo').val();
-      var responsable             = $('#responsable').val();
+      var responsable_actual      = $('#responsable_actual').val();
       var usuario                 = $('#usuario').val();
       var bloque                  = $('#bloque').val();
       var piso                    = $('#piso').val();
       var cubiculo                = $('#cubiculo').val();
       var activo_equipo_retirar   = $('#activo_equipo_retirar').val();
       var activo_monitor_retirar  = $('#activo_monitor_retirar').val();
-      var nuevo_responsable       = $('#nuevo_responsable').val();
+      var responsable             = $('#responsable').val();
       var email_nuevo_responsable = $('#email_nuevo_responsable').val();
       var nuevo_usuario           = $('#nuevo_usuario').val();
       var email_nuevo_usuario     = $('#email_nuevo_usuario').val();
@@ -344,21 +344,21 @@ $('#btningresar_reubicacion').click(
         activo_monitor:activo_monitor,
         id_pri:id_pri,
         id_est:id_est,
-        responsable:responsable,
+        responsable_actual:responsable_actual,
         usuario:usuario,
-        bloque:bloque,
-        piso:piso,
-        cubiculo:cubiculo,
+        bloque_actual:bloque_actual,
+        piso_actual:piso_actual,
+        cubiculo_actual:cubiculo_actual,
         activo_equipo_retirar:activo_equipo_retirar,
         activo_monitor_retirar:activo_monitor_retirar,
         id_pro:id_pro,
-        nuevo_responsable:nuevo_responsable,
+        responsable:responsable,
         email_nuevo_responsable:email_nuevo_responsable,
         nuevo_usuario:nuevo_usuario,
         email_nuevo_usuario:email_nuevo_usuario,
-        nuevo_bloque:nuevo_bloque,
-        nuevo_piso:nuevo_piso,
-        nuevo_cubiculo:nuevo_cubiculo,
+        bloque:bloque,
+        piso:piso,
+        cubiculo:cubiculo,
         nuevo_dir_ip:nuevo_dir_ip,
         dir_mac:dir_mac,
         nuevo_punto_de_red:nuevo_punto_de_red,
@@ -436,13 +436,13 @@ $('#btnmodificar_reubicacion').click(
           id_pro:                 $('#id_pro').val(),
           proceso_equipo_retirar: $('#proceso_equipo_retirar').val(),
 
-          responsable:            $('#responsable').val(),
+          responsable_actual:     $('#responsable_actual').val(),
           usuario:                $('#usuario').val(),
           nuevo_ext_tel:          $('#nuevo_ext_tel').val(),
 
-          bloque:                 $('#bloque').val(),
-          piso:                   $('#piso').val(),
-          cubiculo:               $('#cubiculo').val(),
+          bloque_actual:          $('#bloque_actual').val(),
+          piso_actual:            $('#piso_actual').val(),
+          cubiculo_actual:        $('#cubiculo_actual').val(),
 
           dir_ip:                 $('#dir_ip').val(),
           dir_mac:                $('#dir_mac').val(),
@@ -451,13 +451,13 @@ $('#btnmodificar_reubicacion').click(
           activo_equipo_soporte:  $('#activo_equipo_soporte').val(),
           observaciones:          $('#observaciones').val(),
 
-          nuevo_responsable:      $('#nuevo_responsable').val(),
+          responsable:            $('#responsable').val(),
           email_nuevo_responsable:$('#email_nuevo_responsable').val(),
           nuevo_usuario:          $('#nuevo_usuario').val(),
           email_nuevo_usuario:    $('#email_nuevo_usuario').val(),
-          nuevo_bloque:           $('#nuevo_bloque').val(),
-          nuevo_piso:             $('#nuevo_piso').val(),
-          nuevo_cubiculo:         $('#nuevo_cubiculo').val(),
+          bloque:                 $('#bloque').val(),
+          piso:                   $('#piso').val(),
+          cubiculo:               $('#cubiculo').val(),
           nuevo_dir_ip:           $('#nuevo_dir_ip').val(),
           dir_mac:                $('#dir_mac').val(),
         },
@@ -606,22 +606,22 @@ $('#btnmodificar_reubicado_enviar_email').click(
           activo_monitor          : $('#activo_monitor').val(),
           id_pri                  : $('#id_pri').val(),
           id_est                  : $('#id_est').val(),
-          responsable             : $('#responsable').val(),
+          responsable_actual      : $('#responsable_actual').val(),
           usuario                 : $('#usuario').val(),
-          bloque                  : $('#bloque').val(),
-          piso                    : $('#piso').val(),
-          cubiculo                : $('#cubiculo').val(),
+          bloque_actual           : $('#bloque_actual').val(),
+          piso_actual             : $('#piso_actual').val(),
+          cubiculo_actual         : $('#cubiculo_actual').val(),
           activo_equipo_retirar   : $('#activo_equipo_retirar').val(),
           activo_monitor_retirar  : $('#activo_monitor_retirar').val(),
           id_pro                  : $('#id_pro').val(),
           proceso_equipo_retirar  : $('#proceso_equipo_retirar').val(),
-          nuevo_responsable       : $('#nuevo_responsable').val(),
+          responsable             : $('#responsable').val(),
           email_nuevo_responsable : $('#email_nuevo_responsable').val(),
           nuevo_usuario           : $('#nuevo_usuario').val(),
           email_nuevo_usuario     : $('#email_nuevo_usuario').val(),
-          nuevo_bloque            : $('#nuevo_bloque').val(),
-          nuevo_piso              : $('#nuevo_piso').val(),
-          nuevo_cubiculo          : $('#nuevo_cubiculo').val(),
+          bloque                  : $('#bloque').val(),
+          piso                    : $('#piso').val(),
+          cubiculo                : $('#cubiculo').val(),
           dir_ip                  : $('#dir_ip').val(),
           dir_mac                 : $('#dir_mac').val(),
           punto_de_red            : $('#punto_de_red').val(),
@@ -678,12 +678,12 @@ $('.consultar_reubicacion').focusout(
             $('#seleccionar_prioridad').val( data['prioridad'] );
             $('#id_pri').val( data['prioridad'] );
 
-            $('#responsable').val( data['responsable'] );
+            $('#responsable_actual').val( data['responsable_actual'] );
             $('#usuario').val( data['usuario'] );
 
-            $('#bloque').val( data['bloque'] );
-            $('#piso').val( data['piso'] );
-            $('#cubiculo').val( data['cubiculo'] );
+            $('#bloque_actual').val( data['bloque_actual'] );
+            $('#piso_actual').val( data['piso_actual'] );
+            $('#cubiculo_actual').val( data['cubiculo_actual'] );
 
             $('#dir_ip').val( data['dir_ip'] );
             $('#dir_mac').val( data['dir_mac'] );
@@ -693,15 +693,15 @@ $('.consultar_reubicacion').focusout(
             $('#activo_monitor_retirar').val( data['activo_monitor_retirar'] );
             $('#seleccionar_proceso').val( data['procesos'] );
 
-            $('#nuevo_responsable').val( data['nuevo_responsable'] );
+            $('#responsable').val( data['responsable'] );
             $('#email_nuevo_responsable').val( data['email_nuevo_responsable'] );
             $('#nuevo_usuario').val( data['nuevo_usuario'] );
             $('#email_nuevo_usuario').val( data['email_nuevo_usuario'] );
             $('#nuevo_ext_tel').val( data['nuevo_ext_tel'] );
 
-            $('#nuevo_bloque').val( data['nuevo_bloque'] );
-            $('#nuevo_piso').val( data['nuevo_piso'] );
-            $('#nuevo_cubiculo').val( data['nuevo_cubiculo'] );
+            $('#bloque').val( data['bloque'] );
+            $('#piso').val( data['piso'] );
+            $('#cubiculo').val( data['cubiculo'] );
 
             $('#nuevo_dir_ip').val( data['nuevo_dir_ip'] );
             $('#nuevo_dir_mac').val( data['nuevo_dir_mac'] );
@@ -731,25 +731,6 @@ $('.consultar_reubicacion').focusout(
         });
   });
 
-/*
-          $('.punto_de_red').focusout(
-            function(){
-               $.ajax({
-                    url     :"red-php_consultar_punto_de_red_duplicado.php",
-                    dataType:"json",
-                    type    :'post',
-                    data:{
-                    punto_de_red: $('#punto_de_red').val(),
-                    activo_equipo: $('#activo_equipo').val(),
-                    },
-                    success:function(data) {
-                    alert('Punto de red repetido con el activo: '+ data['activo_equipo']+' Tipo de equipo:  '+ data['tipo_equipo'] +' Estado del equipo:  '+ data['estado_equipo'] );
-                    $("#punto_de_red").focus();
-                        $('#res').html("---- Punto de red duplicado. ----");
-                        $('#res').css('color','yellow');
-                    },
-            });
-          });*/
 
   //PUNTOS DE RED
   function letrasynumeros(e){
@@ -834,6 +815,8 @@ $('.consultar_reubicacion').focusout(
       }
   }
  });
+
+
  // $.ajax({
  //        url     :"cargar_marcas.php",
  //        dataType:"json",

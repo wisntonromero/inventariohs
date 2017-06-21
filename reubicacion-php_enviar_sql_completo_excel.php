@@ -28,18 +28,18 @@ Nicolás Pardo - 2007
         $id_pro                 = $_POST['id_pro'];
         $proceso_equipo_retirar = $_POST['proceso_equipo_retirar'];
 
+        $responsable_actual     = $_POST['responsable_actual'];
         $responsable            = $_POST['responsable'];
-        $nuevo_responsable      = $_POST['nuevo_responsable'];
         $usuario                = $_POST['usuario'];
         $nuevo_usuario          = $_POST['nuevo_usuario'];
         $ext_tel                = $_POST['ext_tel'];
 
+        $bloque_actual          = $_POST['bloque_actual'];
+        $piso_actual            = $_POST['piso_actual'];
+        $cubiculo_actual        = $_POST['cubiculo_actual'];
         $bloque                 = $_POST['bloque'];
         $piso                   = $_POST['piso'];
         $cubiculo               = $_POST['cubiculo'];
-        $nuevo_bloque           = $_POST['nuevo_bloque'];
-        $nuevo_piso             = $_POST['nuevo_piso'];
-        $nuevo_cubiculo         = $_POST['nuevo_cubiculo'];
         $observaciones          = $_POST['observaciones'];
 
 
@@ -68,7 +68,7 @@ LEFT JOIN marcas ON reubicaciones.reu_marca_equipo = marcas.mar_id
 LEFT JOIN prioridades ON reubicaciones.reu_prioridad = prioridades.pri_id
 LEFT JOIN estado ON reubicaciones.reu_estado_equipo = estado.est_id
 LEFT JOIN procesos ON reubicaciones.reu_proceso_equipo_retirar = procesos.pro_id
-WHERE reu_activo LIKE '%$activo_equipo%' AND reu_activo_monitor LIKE '%$activo_monitor' AND reu_activo_equipo_retirar LIKE '%$activo_equipo_retirar%' AND reu_activo_monitor_retirar LIKE '%$activo_monitor_a_retirar%' AND  reu_responsable LIKE '%$responsable%' AND reu_usuario LIKE '%$usuario_anterior%' AND  reu_nuevo_responsable LIKE '%$nuevo_responsable%' AND reu_nuevo_usuario LIKE '%$nuevo_usuario%' AND  reu_estado_equipo LIKE '%$id_est%'";
+WHERE reu_activo LIKE '%$activo_equipo%' AND reu_activo_monitor LIKE '%$activo_monitor' AND reu_activo_equipo_retirar LIKE '%$activo_equipo_retirar%' AND reu_activo_monitor_retirar LIKE '%$activo_monitor_a_retirar%' AND  reu_responsable LIKE '%$responsable_actual%' AND reu_usuario LIKE '%$usuario_anterior%' AND  reu_nuevo_responsable LIKE '%$responsable%' AND reu_nuevo_usuario LIKE '%$nuevo_usuario%' AND  reu_estado_equipo LIKE '%$id_est%'";
 
 
 $r = mysql_query($query,$conexion);

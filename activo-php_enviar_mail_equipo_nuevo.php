@@ -67,8 +67,8 @@ $mail->setFrom('weromero@uninorte.edu.co', 'Winston Elias Romero Duarte');
 //Set an alternative reply-to address
 $mail->addReplyTo('weromero@uninorte.edu.co', 'Winston Elias Romero Duarte');
 //Set who the message is to be sent to
-$mail->addAddress('csu@uninorte.edu.co', 'csu@uninorte.edu.co');
-$mail->AddCC("mierg@uninorte.edu.co", "Gustavo Adolfo Mier Silva");
+//$mail->addAddress('csu@uninorte.edu.co', 'csu@uninorte.edu.co');
+//$mail->AddCC("mierg@uninorte.edu.co", "Gustavo Adolfo Mier Silva");
 $mail->AddCC("weromero@uninorte.edu.co", "Winston Elias Romero Duarte");
 //Set the subject line
 $mail->Subject = 'SOLICITUD RESERVA- Favor hacer reserva de ip a este equipo NUEVO :  ' . "$activo_equipo";

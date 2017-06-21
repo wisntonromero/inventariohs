@@ -37,13 +37,13 @@
       $consulta['prioridad']              = $registro['reu_prioridad'];
       $consulta['estado_equipo']          = $registro['reu_estado_equipo'];
 
-      $consulta['responsable']            = $registro['reu_responsable'];
+      $consulta['responsable_actual']     = $registro['reu_responsable'];
       $consulta['usuario']                = $registro['reu_usuario'];
       $consulta['ext_tel']                = $registro['reu_extension'];
 
-      $consulta['bloque']                 = $registro['reu_bloque'];
-      $consulta['piso']                   = $registro['reu_piso'];
-      $consulta['cubiculo']               = $registro['reu_cubiculo'];
+      $consulta['bloque_actual']          = $registro['reu_bloque'];
+      $consulta['piso_actual']            = $registro['reu_piso'];
+      $consulta['cubiculo_actual']        = $registro['reu_cubiculo'];
 
       $consulta['dir_ip']                 = $registro['reu_dir_ip'];
       $consulta['dir_mac']                = $registro['reu_dir_mac'];
@@ -54,15 +54,15 @@
       $consulta['id_pro']                 = $registro['reu_proceso_equipo_retirar'];
       $consulta['proceso_equipo_retirar'] = $registro['pro_descripcion'];
 
-      $consulta['nuevo_responsable']      = $registro['reu_nuevo_responsable'];
+      $consulta['responsable']            = $registro['reu_nuevo_responsable'];
       $consulta['email_nuevo_responsable']= $registro['reu_email_nuevo_responsable'];
       $consulta['nuevo_usuario']          = $registro['reu_nuevo_usuario'];
       $consulta['email_nuevo_usuario']    = $registro['reu_email_nuevo_usuario'];
       $consulta['nuevo_ext_tel']          = $registro['reu_extension'];
 
-      $consulta['nuevo_bloque']           = $registro['reu_nuevo_bloque'];
-      $consulta['nuevo_piso']             = $registro['reu_nuevo_piso'];
-      $consulta['nuevo_cubiculo']         = $registro['reu_nuevo_cubiculo'];
+      $consulta['bloque']                 = $registro['reu_nuevo_bloque'];
+      $consulta['piso']                   = $registro['reu_nuevo_piso'];
+      $consulta['cubiculo']               = $registro['reu_nuevo_cubiculo'];
 
       $consulta['ot_sigma']               = $registro['reu_ot_sigma'];
       $consulta['activo_equipo_soporte']  = $registro['reu_activo_soporte'];

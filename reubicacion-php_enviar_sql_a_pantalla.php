@@ -10,9 +10,9 @@ $activo_equipo = $_POST['activo_equipo'];
 $activo_monitor = $_POST['activo_monitor'];
 $activo_equipo_retirar = $_POST['activo_equipo_retirar'];
 $activo_monitor_a_retirar = $_POST['activo_monitor_a_retirar'];
-$responsable = $_POST['responsable'];
+$responsable_actual = $_POST['responsable_actual'];
 $usuario_anterior = $_POST['usuario_anterior'];
-$nuevo_responsable = $_POST['nuevo_responsable'];
+$responsable = $_POST['responsable'];
 $nuevo_usuario = $_POST['nuevo_usuario'];
 
 echo "<p>Consulta de orden de compra: $orden_de_compra - Activo Equipo: $activo_equipo - Activo Equipo a rebicar: $activo_equipo_retirar - Responsable: $responsable - Nuevo Responsable: $nuevo_responsable </p>";
@@ -34,7 +34,7 @@ LEFT JOIN marcas ON reubicaciones.reu_marca_equipo = marcas.mar_id
 LEFT JOIN prioridades ON reubicaciones.reu_prioridad = prioridades.pri_id
 LEFT JOIN estado ON reubicaciones.reu_estado_equipo = estado.est_id
 LEFT JOIN procesos ON reubicaciones.reu_proceso_equipo_retirar = procesos.pro_id
-WHERE reu_activo LIKE '%$activo_equipo%' AND reu_activo_monitor LIKE '%$activo_monitor' AND reu_activo_equipo_retirar LIKE '%$activo_equipo_retirar%' AND reu_activo_monitor_retirar LIKE '%$activo_monitor_a_retirar%' AND  reu_responsable LIKE '%$responsable%' AND reu_usuario LIKE '%$usuario_anterior%' AND  reu_nuevo_responsable LIKE '%$nuevo_responsable%' AND reu_nuevo_usuario LIKE '%$nuevo_usuario%' AND  reu_estado_equipo LIKE '%$id_est%'";
+WHERE reu_activo LIKE '%$activo_equipo%' AND reu_activo_monitor LIKE '%$activo_monitor' AND reu_activo_equipo_retirar LIKE '%$activo_equipo_retirar%' AND reu_activo_monitor_retirar LIKE '%$activo_monitor_a_retirar%' AND  reu_responsable LIKE '%$responsable_actual%' AND reu_usuario LIKE '%$usuario_anterior%' AND  reu_nuevo_responsable LIKE '%$responsable%' AND reu_nuevo_usuario LIKE '%$nuevo_usuario%' AND  reu_estado_equipo LIKE '%$id_est%'";
 
 $r = mysql_query($query,$conexion);
 

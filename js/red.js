@@ -256,7 +256,7 @@ $('#btn_ingresar_puntos_de_red_por_lotes').click(
   }
 );
 
-$('.punto_de_red').focusout(
+/*$('#punto_de_red').focusout(
   function(){
      $.ajax({
           url     :"red-php_consultar_punto_de_red_duplicado.php",
@@ -275,7 +275,7 @@ $('.punto_de_red').focusout(
   });
 
 });
-
+*/
 
 
 

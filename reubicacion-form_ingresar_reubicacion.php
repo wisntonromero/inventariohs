@@ -215,8 +215,8 @@ include_once("sesion.php");
 		<div class="row">
 	      	<h4>Informacion del responsable actual del equipo </h4>
 		   	<div class="columns large-4">
-		        <label for="responsable">Responsable</label>
-		    	<input type="text" name="responsable" id="responsable" value="" placeholder="Obligatorio responsable del equipo">
+		        <label for="responsable_actual">Responsable</label>
+		    	<input type="text" name="responsable_actual" id="responsable_actual" value="" placeholder="Obligatorio responsable del equipo">
 		    </div>
 	   		<div class="columns large-4">
 	        	<label for="usuario">Usuario</label>
@@ -231,16 +231,16 @@ include_once("sesion.php");
 		<div class="row">
 		    <h4> Información de la ubicación actual del equipo</h4>
 	    	<div class="columns large-4">
-		        <label for="bloque">Bloque</label>
-		        <input type="text" name="bloque" id="bloque" value="" placeholder="Obligatorio bloque">
+		        <label for="bloque_actual">Bloque</label>
+		        <input type="text" name="bloque_actual" id="bloque_actual" value="" placeholder="Obligatorio bloque">
 		    </div>
 		    <div class="columns large-4">
-		        <label for="piso">Piso</label>
-		        <input type="text" name="piso" id="piso"  value="" placeholder="Obligatorio piso">
+		        <label for="piso_actual">Piso</label>
+		        <input type="text" name="piso_actual" id="piso_actual"  value="" placeholder="Obligatorio piso">
 		    </div>
 		    <div class="columns large-4">
-		        <label for="cubiculo">Cubiculo</label>
-		        <input type="text" name="cubiculo" id="cubiculo" value="" placeholder="Obligatorio cubiculo">
+		        <label for="cubiculo_actual">Cubiculo</label>
+		        <input type="text" name="cubiculo_actual" id="cubiculo_actual" value="" placeholder="Obligatorio cubiculo">
 		    </div>
 	    </div>
 
@@ -325,8 +325,8 @@ include_once("sesion.php");
 		<div class="row">
 	      	<h4>Informacion del nuevo responsable del equipo </h4>
 		   	<div class="columns large-4">
-		        <label for="nuevo_responsable">Responsable</label>
-		    	<input type="text" name="nuevo_responsable" id="nuevo_responsable" value="" placeholder="Obligatorio responsable del equipo">
+		        <label for="responsable">Responsable</label>
+		    	<input type="text" name="responsable" id="responsable" value="" placeholder="Obligatorio responsable del equipo">
 		    </div>
 	   		<div class="columns large-4">
 	        	<label for="nuevo_usuario">Usuario</label>
@@ -341,16 +341,16 @@ include_once("sesion.php");
 	    <div class="row">
 		    <h4> Información de la nueva ubicación del equipo</h4>
 	    	<div class="columns large-4">
-		        <label for="nuevo_bloque">Bloque</label>
-		        <input type="text" name="nuevo_bloque" id="nuevo_bloque" value="" placeholder="Obligatorio bloque">
+		        <label for="bloque">Bloque</label>
+		        <input type="text" name="bloque" id="nuevo_bloque" value="" placeholder="Obligatorio bloque">
 		    </div>
 		    <div class="columns large-4">
-		        <label for="nuevo_piso">Piso</label>
-		        <input type="text" name="nuevo_piso" id="nuevo_piso"  value="" placeholder="Obligatorio piso">
+		        <label for="piso">Piso</label>
+		        <input type="text" name="piso" id="piso"  value="" placeholder="Obligatorio piso">
 		    </div>
 		    <div class="columns large-4">
-		        <label for="nuevo_cubiculo">Cubiculo</label>
-		        <input type="text" name="nuevo_cubiculo" id="nuevo_cubiculo" value="" placeholder="Obligatorio cubiculo">
+		        <label for="cubiculo">Cubiculo</label>
+		        <input type="text" name="cubiculo" id="cubiculo" value="" placeholder="Obligatorio cubiculo">
 		    </div>
 	    </div>
 

@@ -26,13 +26,13 @@
     $id_pro                 = $_POST['id_pro'];
     $proceso_equipo_retirar = $_POST['proceso_equipo_retirar'];
 
-    $responsable            = strtoupper($_POST['responsable']);
+    $responsable_actual     = strtoupper($_POST['responsable_actual']);
     $usuario                = strtoupper($_POST['usuario']);
     $nuevo_ext_tel          = strtoupper($_POST['nuevo_ext_tel']);
 
-    $bloque                 = strtoupper($_POST['bloque']);
-    $piso                   = strtoupper($_POST['piso']);
-    $cubiculo               = strtoupper($_POST['cubiculo']);
+    $bloque_actual          = strtoupper($_POST['bloque_actual']);
+    $piso_actual            = strtoupper($_POST['piso_actual']);
+    $cubiculo_actual        = strtoupper($_POST['cubiculo_actual']);
 
     $dir_ip                 = $_POST['dir_ip'];
     $dir_mac                = strtoupper($_POST['dir_mac']);
@@ -41,22 +41,22 @@
     $activo_equipo_soporte  = strtoupper($_POST['activo_equipo_soporte']);
     $observaciones          = strtoupper($_POST['observaciones']);
 
-    $nuevo_responsable      = strtoupper($_POST['nuevo_responsable']);
+    $responsable      = strtoupper($_POST['responsable']);
     $email_nuevo_responsable= strtolower($_POST['email_nuevo_responsable']);
     $nuevo_usuario          = strtoupper($_POST['nuevo_usuario']);
     $email_nuevo_usuario    = strtolower($_POST['email_nuevo_usuario']);
-    $nuevo_bloque           = strtoupper($_POST['nuevo_bloque']);
-    $nuevo_piso             = strtoupper($_POST['nuevo_piso']);
-    $nuevo_cubiculo         = strtoupper($_POST['nuevo_cubiculo']);
+    $bloque                 = strtoupper($_POST['bloque']);
+    $piso                   = strtoupper($_POST['piso']);
+    $cubiculo               = strtoupper($_POST['cubiculo']);
 
     // $query = "UPDATE compras SET com_observaciones='$observaciones' WHERE com_activo_equipo='$activo_equipo'";
     // $resultado1 = mysql_query($query,$conexion);
 
     $query = "UPDATE reubicaciones SET reu_activo='$activo_equipo', reu_tipo_equipo='$id_tip', reu_marca_equipo='$id_mar', reu_modelo_equipo='$modelo_equipo',
-    reu_activo_monitor='$activo_monitor',reu_estado_equipo='$id_est',reu_prioridad='$id_pri',reu_responsable='$responsable', reu_usuario='$usuario',
-    reu_bloque='$bloque', reu_piso='$piso', reu_cubiculo='$cubiculo', reu_activo_equipo_retirar='$activo_equipo_retirar', reu_activo_monitor_retirar='$activo_monitor_retirar',
-    reu_proceso_equipo_retirar='$id_pro', reu_nuevo_responsable='$nuevo_responsable', reu_email_nuevo_responsable='$email_nuevo_responsable', reu_nuevo_usuario='$nuevo_usuario', reu_email_nuevo_usuario='$email_nuevo_usuario', reu_nuevo_bloque='$nuevo_bloque', reu_nuevo_piso='$nuevo_piso',
-    reu_nuevo_cubiculo='$nuevo_cubiculo', reu_dir_ip='$dir_ip', reu_dir_mac='$dir_mac', reu_punto_de_red='$punto_de_red', reu_extension='$nuevo_ext_tel', reu_ot_sigma='$ot_sigma',
+    reu_activo_monitor='$activo_monitor',reu_estado_equipo='$id_est',reu_prioridad='$id_pri',reu_responsable='$responsable_actual', reu_usuario='$usuario',
+    reu_bloque='$bloque_actual', reu_piso='$piso_actual', reu_cubiculo='$cubiculo_actual', reu_activo_equipo_retirar='$activo_equipo_retirar', reu_activo_monitor_retirar='$activo_monitor_retirar',
+    reu_proceso_equipo_retirar='$id_pro', reu_nuevo_responsable='$responsable', reu_email_nuevo_responsable='$email_nuevo_responsable', reu_nuevo_usuario='$nuevo_usuario', reu_email_nuevo_usuario='$email_nuevo_usuario', reu_nuevo_bloque='$bloque', reu_nuevo_piso='$piso',
+    reu_nuevo_cubiculo='$cubiculo', reu_dir_ip='$dir_ip', reu_dir_mac='$dir_mac', reu_punto_de_red='$punto_de_red', reu_extension='$nuevo_ext_tel', reu_ot_sigma='$ot_sigma',
     reu_activo_soporte='$activo_equipo_soporte', reu_observacion='$observaciones', reu_f_ult_actualizacion=NOW() WHERE reu_id='$reu_id'";
     $resultado1 = mysql_query($query,$conexion);
 
@@ -107,13 +107,13 @@
     //Set an alternative reply-to address
     $mail->addReplyTo($_SESSION['correo'], $_SESSION['nombre']);
     //Set who the message is to be sent to
-    $mail->addAddress("trasladosybajas@uninorte.edu.co", "Traslados y Bajas Uninorte");
-    $mail->addAddress("coordinadorequipoinformatico@uninorte.edu.co", "Coordinador Equipo Informatico");
-    $mail->addAddress("egaliano@uninorte.edu.co", "Emma Beatriz Galiano Vargas");
-    $mail->AddCC("recepciondeactivos@uninorte.edu.co", "Recepcion de Activos");
-    $mail->AddCC("soportealmacen2@uninorte.edu.co", "Soporte Almacen 2");
-    $mail->AddCC("$email_nuevo_responsable", "$nuevo_responsable");
-    $mail->AddCC("$email_nuevo_usuario", "$nuevo_usuario");
+   // $mail->addAddress("trasladosybajas@uninorte.edu.co", "Traslados y Bajas Uninorte");
+  //  $mail->addAddress("coordinadorequipoinformatico@uninorte.edu.co", "Coordinador Equipo Informatico");
+ //   $mail->addAddress("egaliano@uninorte.edu.co", "Emma Beatriz Galiano Vargas");
+ //   $mail->AddCC("recepciondeactivos@uninorte.edu.co", "Recepcion de Activos");
+ //   $mail->AddCC("soportealmacen2@uninorte.edu.co", "Soporte Almacen 2");
+ //   $mail->AddCC("$email_nuevo_responsable", "$nuevo_responsable");
+ //   $mail->AddCC("$email_nuevo_usuario", "$nuevo_usuario");
     $mail->AddCC($_SESSION['correo'], $_SESSION['nombre']);
     
     //Set the subject line
@@ -127,11 +127,11 @@
                     'Tipo de equipo             : '. "$tipo_equipo" . "\r\n" .
                     'Marca del equipo           : '. "$marca" . "\r\n" .
                     'Activo monitor             : '. "$activo_monitor" . "\r\n" .
-                    'Responsable del equipo     : '. "$nuevo_responsable". "\r\n" .
+                    'Responsable del equipo     : '. "$responsable". "\r\n" .
                     'Usuario del equipo         : '. "$nuevo_usuario". "\r\n" .
-                    'Bloque                     : '. "$nuevo_bloque". "\r\n" .
-                    'Piso                       : '. "$nuevo_piso". "\r\n" .
-                    'Ubicación                  : '. "$nuevo_cubiculo". "\r\n" .
+                    'Bloque                     : '. "$bloque". "\r\n" .
+                    'Piso                       : '. "$piso". "\r\n" .
+                    'Ubicación                  : '. "$cubiculo". "\r\n" .
                     'Activo retirado            : '. "$activo_equipo_retirar"."\r\n".
                     'Activo monitor retirado    : '. "$activo_monitor_retirar"."\r\n".
                     'Proceso equipo retirado    : '. "$proceso_equipo_retirar". "\r\n" .
