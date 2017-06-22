@@ -16,11 +16,11 @@ echo $_SESSION['usuario'];
     <script type="text/javascript" src="resources/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="resources/functions.js"></script>
     <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="resources/style.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Consultar prestamo de llaves</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="resources/style.css" />
+   
 </head>
 <body>
   <div class="row">

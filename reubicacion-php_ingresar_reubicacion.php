@@ -7,38 +7,51 @@
     mysql_set_charset('utf8',$conexion);
     mysql_select_db($database);
 
-    $activo_equipo          = $_POST['activo_equipo'];
+
+    $reu_id                 = ($_POST['reu_id']);
+    $activo_equipo          = strtoupper($_POST['activo_equipo']);
     $id_tip                 = $_POST['id_tip'];
+    $tipo_equipo            = $_POST['tipo_equipo'];
     $id_mar                 = $_POST['id_mar'];
-    $modelo_equipo          = $_POST['modelo_equipo'];
-    $activo_monitor         = $_POST['activo_monitor'];
+    $modelo_equipo          = strtoupper($_POST['modelo_equipo']);
     $id_pri                 = $_POST['id_pri'];
-    $id_est                 = $_POST['estado_equipo'];
-
-    $responsable_actual     = $_POST['responsable_actual'];
-    $usuario                = $_POST['usuario'];
-
-    $bloque_actual          = $_POST['bloque_actual'];
-    $piso_actual            = $_POST['piso_actual'];
-    $cubiculo_actual        = $_POST['cubiculo_actual'];
-
-    $activo_equipo_retirar  = $_POST['activo_equipo_retirar'];
-    $activo_monitor_retirar = $_POST['activo_monitor_retirar'];
+    $id_cen                 = $_POST['id_cen'];
+    $activo_monitor         = strtoupper($_POST['activo_monitor']);
+    $serial_monitor         = strtoupper($_POST['serial_monitor']);
+    $id_est                 = $_POST['id_est'];
+    $estado_equipo          = strtoupper($_POST['estado_equipo']);
+    $activo_equipo_retirar  = strtoupper($_POST['activo_equipo_retirar']);
+    $activo_monitor_retirar = strtoupper($_POST['activo_monitor_retirar']);
     $id_pro                 = $_POST['id_pro'];
     $proceso_equipo_retirar = $_POST['proceso_equipo_retirar'];
 
-    $responsable            = $_POST['responsable'];
-    $nuevo_usuario          = $_POST['nuevo_usuario'];
-    $bloque                 = $_POST['bloque'];
-    $piso                   = $_POST['piso'];
-    $cubiculo               = $_POST['cubiculo'];
-    $activo_equipo_soporte  = $_POST['activo_equipo_soporte'];
-    $nuevo_dir_ip           = $_POST['nuevo_dir_ip'];
-    $dir_mac                = $_POST['dir_mac'];
-    $nuevo_punto_de_red     = $_POST['nuevo_punto_de_red'];
-    $ot_sigma               = $_POST['ot_sigma'];
-    $nuevo_ext_tel          = $_POST['nuevo_ext_tel'];
-    $observaciones          = $_POST['observaciones'];
+    $responsable_actual     = strtoupper($_POST['responsable_actual']);
+    $usuario                = strtoupper($_POST['usuario']);
+    $nuevo_ext_tel          = strtoupper($_POST['nuevo_ext_tel']);
+
+    $bloque_actual          = strtoupper($_POST['bloque_actual']);
+    $piso_actual            = strtoupper($_POST['piso_actual']);
+    $cubiculo_actual        = strtoupper($_POST['cubiculo_actual']);
+
+    $dir_ip                 = $_POST['dir_ip'];
+    $dir_mac                = strtoupper($_POST['dir_mac']);
+    $punto_de_red           = strtoupper($_POST['punto_de_red']);
+    $ot_sigma               = strtoupper($_POST['ot_sigma']);
+    $activo_equipo_soporte  = strtoupper($_POST['activo_equipo_soporte']);
+    $observaciones          = strtoupper($_POST['observaciones']);
+
+    $responsable            = strtoupper($_POST['responsable']);
+    $email_nuevo_responsable= strtolower($_POST['email_nuevo_responsable']);
+    $nuevo_usuario          = strtoupper($_POST['nuevo_usuario']);
+    $email_nuevo_usuario    = strtolower($_POST['email_nuevo_usuario']);
+
+    $bloque                 = strtoupper($_POST['bloque']);
+    $piso                   = strtoupper($_POST['piso']);
+    $cubiculo               = strtoupper($_POST['cubiculo']);
+
+
+
+
 
 
     $query = "INSERT INTO reubicaciones(reu_activo, reu_tipo_equipo, reu_marca_equipo, reu_modelo_equipo, reu_activo_monitor, reu_estado_equipo, reu_prioridad, reu_responsable, reu_usuario, reu_bloque, reu_piso, reu_cubiculo, reu_activo_equipo_retirar, reu_activo_monitor_retirar, reu_proceso_equipo_retirar, reu_nuevo_responsable, reu_nuevo_usuario, reu_nuevo_bloque, reu_nuevo_piso, reu_nuevo_cubiculo, reu_activo_soporte, reu_dir_ip, reu_dir_mac, reu_punto_de_red, reu_extension, reu_ot_sigma, reu_observacion,reu_f_ult_actualizacion)

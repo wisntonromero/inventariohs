@@ -342,7 +342,7 @@ include_once("sesion.php");
 		    <h4> Información de la nueva ubicación del equipo</h4>
 	    	<div class="columns large-4">
 		        <label for="bloque">Bloque</label>
-		        <input type="text" name="bloque" id="nuevo_bloque" value="" placeholder="Obligatorio bloque">
+		        <input type="text" name="bloque" id="bloque" value="" placeholder="Obligatorio bloque">
 		    </div>
 		    <div class="columns large-4">
 		        <label for="piso">Piso</label>

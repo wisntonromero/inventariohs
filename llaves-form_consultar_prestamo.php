@@ -93,7 +93,9 @@ switch ($action)
 
 // si esta deshabilitado el layout solo imprime el template
 if ($view->disableLayout==true)
-{include_once ($view->contentTemplate);}
+{include_once ($view->contentTemplate);
+    include_once ('templates/layout.php');
+}
 else
-{include_once ('templates/layout.php');} // el layout incluye el template adentro
+{include_once ('templates/menu.php');} // el layout incluye el template adentro
 ?>
