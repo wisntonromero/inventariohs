@@ -1,52 +1,8 @@
 <?php
 include_once("config.php");
 include_once("sesion.php");
+include_once("menu.php");
 ?>
-
-<!doctype html>
-<html class="no-js" lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Consultar/ Orden de compra</title>
-  <LINK REL="SHORTCUT ICON" HREF="uninorte.ico" />
-  <link rel="stylesheet" href="css/foundation.css" />
-  <!-- <Link href="css/estilo_maestro.css" type="text/css" rel="stylesheet"> -->
-  <script src="js/vendor/modernizr.js"></script>
-  </head>
-
-<body>
-  <div class="row">
-    <div class="columns large-10">
-      <h1>
-        <img style="width: 203px; height: 146px margin: -55px -216px -112px -140px;" src="images/jpg/logo.jpg" alt="Logo Universidad del Norte."/>
-      </h1>
-    </div>
-    <div class="columns large-2">
-        <img style="width: 60px; height: 146px margin: -55px -216px -112px -140px;" src="<?php echo $_SESSION['ubicacion_foto'];  ?>">
-        <?php echo $_SESSION['usuario'];?>
-    </div>
-  </div>
-
-  <nav class="top-bar" data-topbar>
-    <ul class="title-area">
-      <li class="name">
-        <!-- Titulo del Menu -->
-        <h1><a href="#">Modificación por lote de equipos por orden de compra.</a></h1>
-      </li>
-        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-    </ul>
-    <section class="top-bar-section">
-      <span id="res"></span>
-      <!-- Right Nav Section  menu lado derecho-->
-      <ul class="right">
-        <li><a href="inicio.php">Inicio</a></li>
-        <li><a href="compras-form_compras.php">Entrega de Equipos</a></li>
-      </ul>
-    </section>
-  </nav>
-
-
   <form method="post">
 
     <div class="row">
@@ -165,5 +121,3 @@ $(document).ready(function(){
 });
 
 </script>
-</body>
-</html>

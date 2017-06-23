@@ -1,49 +1,8 @@
 <?php
 include_once("config.php");
 include_once("sesion.php");
+include_once("menu.php");
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-
-<!--
-/*
- * examples/mysql/index.html
- * 
- * This file is part of EditableGrid.
- * http://editablegrid.net
- *
- * Copyright (c) 2011 Webismymind SPRL
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://editablegrid.net/license
- */
--->
-
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="SHORTCUT ICON" href="images/icons/uninorte.ico" />
-    <title>Consulta y Modificación</title>
-		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
-	  <link rel="stylesheet" href="css/foundation.css"/>
-    <link rel="stylesheet" href="css/font-awesome-4.1.0/css/font-awesome.min.css" type="text/css" media="screen">
-    <script src="js/vendor/modernizr.js"></script>
-  </head>
-	
-	<body>
-
-    <div class="row">
-        <div class="columns large-10">
-          <h1>
-            <img style="width: 203px; height: 146px margin: -55px -216px -112px -140px;" src="images/jpg/logo.jpg" alt="Logo Universidad del Norte."/>
-          </h1>
-        </div>
-        <div class="columns large-2">
-            <img style="width: 60px; height: 146px margin: -55px -216px -112px -140px;" src="<?php echo $_SESSION['ubicacion_foto'];  ?>">
-            <?php echo $_SESSION['usuario'];?>
-        </div>
-    </div>
 
     <div class ="contain-to-grid sticky">
 

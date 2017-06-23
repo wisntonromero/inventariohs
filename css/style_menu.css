@@ -1,0 +1,117 @@
+/* demo page styles */
+
+/* fondo del pagina*/ 
+/*body {
+    background:#eee;
+    margin:0;
+    padding:0;
+}*/
+
+/*.example {
+    background:#fff url(../images/1.jpg);
+    width:870px;
+    height:570px;
+    border:1px #000 solid;
+    margin:20px auto;
+    padding:15px;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}*/
+
+
+.texto1 {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.info {background-color: #2196F3;} /* Blue */
+/* main menu styles */
+#nav,#nav ul {
+    /*background-image:url(../images/fondo.jpg);*/
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+#nav {
+    height:41px;
+    padding-left:180px; /* posicion a la izq del menu */
+    padding-top:0px;  /* posicion del menu principal dentro de la barra del menu */
+    position:relative;
+    z-index:2;
+}
+#nav ul {
+    left:-9999px;
+    position:absolute;
+    top:45px; /* posicion del sub-menu principal con respecto a la barra de menus */ 
+    width:auto;
+}
+#nav ul ul {
+    left:-9999px;
+    position:absolute;
+    top:0; /* posicion o espaciado en filas del sub-menu secundaio con respecto al menu principal */ 
+    width:auto;
+}
+#nav li {
+    float:left;
+    margin-right:1px; /* Espaciado de los nombres entre los menus principales */ 
+    position:relative;
+}
+#nav li a {
+    background:#333333; /* Color fondo menu sin sub-menus*/
+    color:#ffffff; /* Color letras menu*/
+    display:block;
+    float:left;
+    font-size:16px;
+    padding:8px 10px;
+    text-decoration:none;
+}
+
+/*  Bordes redondos de los menus */
+#nav > li > a { 
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    -o-border-radius:6px;
+    border-radius:6px;
+    overflow:hidden;
+}
+
+/* Flecha en los menus */  
+#nav li a.fly {
+    background:#333333 url(../images/arrow.gif) no-repeat right center; /* Color fondo menu con sub-menus*/
+    padding-right:15px;
+}
+
+#nav ul li {
+    margin:0;
+}
+
+#nav ul li a {
+    width:120px; /* ancho de los sub-menus, si lo cambio se deforma */ 
+}
+
+#nav ul li a.fly {
+    padding-right:10px;
+}
+
+/*hover styles*/
+#nav li:hover > a {
+    background-color:#008cba; /* Color boton menu al tener el focus*/ 
+    /*background-color:#858180;*/
+    color:#fff;
+}
+
+/*focus styles*/
+    #nav li a:focus {
+    outline-width:-2;
+}
+
+/*popups*/
+#nav li a:active + ul.dd,#nav li a:focus + ul.dd,#nav li ul.dd:hover {
+    left:0;
+}
+#nav ul.dd li a:active + ul,#nav ul.dd li a:focus + ul,#nav ul.dd li ul:hover {
+    left:120px; /* posocion o espaciado en colomnas del sub-menu */ 
+}
