@@ -3,13 +3,13 @@ include_once("config.php");
 include_once("sesion.php");
 include_once("menu.php");
 ?>
-
-	<div id="capaf">
+	<!--- <div id="capaf">
 	    &nbsp;
-	</div>
+	</div> -->
 
 	<form name="form_compras" id="form_compras" method="post" action="">
  		<div class="row">
+ 		 <div class="texto1 info">Estas en : Exportar activo</div>
 		    <h4>Informacion del equipo</h4>
 		    <div class="columns large-2">
 		        <label for="activo_equipo">Activo del equipo</label>

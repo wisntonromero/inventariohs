@@ -38,7 +38,7 @@
       $consulta['estado_equipo']          = $registro['reu_estado_equipo'];
 
       $consulta['responsable_actual']     = $registro['reu_responsable'];
-      $consulta['usuario']                = $registro['reu_usuario'];
+      $consulta['usuario_actual']                = $registro['reu_usuario'];
       $consulta['ext_tel']                = $registro['reu_extension'];
 
       $consulta['bloque_actual']          = $registro['reu_bloque'];
@@ -56,7 +56,7 @@
 
       $consulta['responsable']            = $registro['reu_nuevo_responsable'];
       $consulta['email_nuevo_responsable']= $registro['reu_email_nuevo_responsable'];
-      $consulta['nuevo_usuario']          = $registro['reu_nuevo_usuario'];
+      $consulta['usuario']                = $registro['reu_nuevo_usuario'];
       $consulta['email_nuevo_usuario']    = $registro['reu_email_nuevo_usuario'];
       $consulta['nuevo_ext_tel']          = $registro['reu_extension'];
 

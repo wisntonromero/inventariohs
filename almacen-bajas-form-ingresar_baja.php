@@ -9,6 +9,7 @@ include_once("menu.php");
   <!-- <form method="post" action="almacen-php_enviar_mail_equipos_bajas.php" enctype="multipart/form-data">  -->
       <form method="post" action="almacen-bajas-php-enviar_mail_equipos_bajas.php" enctype="multipart/form-data"> 
             <div class="row">
+             <div class="texto1 info">Estas en : Ingresar baja</div>
               <h4>Envio de equipos al almacen - Equipos de baja</h4>
               
               <div class="columns large-3">

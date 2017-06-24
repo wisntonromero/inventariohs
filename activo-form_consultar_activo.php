@@ -6,6 +6,7 @@ include_once("menu.php");
 
   <form name="activo" id="activo" method="post" action="">
     <div class="row">
+     <div class="texto1 info">Estas en : Consultar Activo</div>
       <h4>Informacion del equipo</h4>
 
      <div class="columns large-2">

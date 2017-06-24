@@ -35,7 +35,7 @@ $('#consultar_reubicacion').click(
             $('#seleccionar_prioridad').val( data['prioridad'] );
             $('#id_pri').val( data['prioridad'] );
             $('#responsable_actual').val( data['responsable_actual'] );
-            $('#usuario').val( data['usuario'] );
+            $('#usuario_actual').val( data['usuario_actual'] );
             $('#bloque_actual').val( data['bloque_actual'] );
             $('#piso_actual').val( data['piso_actual'] );
             $('#cubiculo_actual').val( data['cubiculo_actual'] );
@@ -52,7 +52,7 @@ $('#consultar_reubicacion').click(
 
             $('#responsable').val( data['responsable'] );
             $('#email_nuevo_responsable').val( data['email_nuevo_responsable'] );
-            $('#nuevo_usuario').val( data['nuevo_usuario'] );
+            $('#usuario').val( data['usuario'] );
             $('#email_nuevo_usuario').val( data['email_nuevo_usuario'] );
             $('#nuevo_ext_tel').val( data['nuevo_ext_tel'] );
 
@@ -140,7 +140,7 @@ $('#btn_exportar_equipo_reubicado').click(
             $('#seleccionar_prioridad').val( data['prioridad'] );
             $('#id_pri').val( data['prioridad'] );
             $('#responsable_actual').val( data['responsable_actual'] );
-            $('#usuario').val( data['usuario'] );
+            $('#usuario_actual').val( data['usuario_actual'] );
             $('#bloque_actual').val( data['bloque_actual'] );
             $('#piso_actual').val( data['piso_actual'] );
             $('#cubiculo_actual').val( data['cubiculo_actual'] );
@@ -156,7 +156,7 @@ $('#btn_exportar_equipo_reubicado').click(
 
             $('#responsable').val( data['responsable'] );
             $('#email_nuevo_responsable').val( data['email_nuevo_responsable'] );
-            $('#nuevo_usuario').val( data['nuevo_usuario'] );
+            $('#usuario').val( data['usuario'] );
             $('#email_nuevo_usuario').val( data['email_nuevo_usuario'] );
             $('#nuevo_ext_tel').val( data['nuevo_ext_tel'] );
 
@@ -315,7 +315,7 @@ $('#btningresar_reubicacion').click(
       var id_est                  = $('#id_est').val();
       var modelo_equipo           = $('#modelo_equipo').val();
       var responsable_actual      = $('#responsable_actual').val();
-      var usuario                 = $('#usuario').val();
+      var usuario_actual          = $('#usuario_actual').val();
       var bloque_actual           = $('#bloque_actual').val();
       var piso_actual             = $('#piso_actual').val();
       var cubiculo_actual         = $('#cubiculo_actual').val();
@@ -323,7 +323,7 @@ $('#btningresar_reubicacion').click(
       var activo_monitor_retirar  = $('#activo_monitor_retirar').val();
       var responsable             = $('#responsable').val();
       var email_nuevo_responsable = $('#email_nuevo_responsable').val();
-      var nuevo_usuario           = $('#nuevo_usuario').val();
+      var usuario                 = $('#usuario').val();
       var email_nuevo_usuario     = $('#email_nuevo_usuario').val();
       var bloque                  = $('#bloque').val();
       var piso                    = $('#piso').val();
@@ -345,7 +345,7 @@ $('#btningresar_reubicacion').click(
         id_pri:id_pri,
         id_est:id_est,
         responsable_actual:responsable_actual,
-        usuario:usuario,
+        usuario_actual:usuario_actual,
         bloque_actual:bloque_actual,
         piso_actual:piso_actual,
         cubiculo_actual:cubiculo_actual,
@@ -354,7 +354,7 @@ $('#btningresar_reubicacion').click(
         id_pro:id_pro,
         responsable:responsable,
         email_nuevo_responsable:email_nuevo_responsable,
-        nuevo_usuario:nuevo_usuario,
+        usuario:usuario,
         email_nuevo_usuario:email_nuevo_usuario,
         bloque:bloque,
         piso:piso,
@@ -437,7 +437,7 @@ $('#btnmodificar_reubicacion').click(
           proceso_equipo_retirar: $('#proceso_equipo_retirar').val(),
 
           responsable_actual:     $('#responsable_actual').val(),
-          usuario:                $('#usuario').val(),
+          usuario_actual:         $('#usuario_actual').val(),
           nuevo_ext_tel:          $('#nuevo_ext_tel').val(),
 
           bloque_actual:          $('#bloque_actual').val(),
@@ -453,7 +453,7 @@ $('#btnmodificar_reubicacion').click(
 
           responsable:            $('#responsable').val(),
           email_nuevo_responsable:$('#email_nuevo_responsable').val(),
-          nuevo_usuario:          $('#nuevo_usuario').val(),
+          usuario:                $('#usuario').val(),
           email_nuevo_usuario:    $('#email_nuevo_usuario').val(),
           bloque:                 $('#bloque').val(),
           piso:                   $('#piso').val(),
@@ -607,7 +607,7 @@ $('#btnmodificar_reubicado_enviar_email').click(
           id_pri                  : $('#id_pri').val(),
           id_est                  : $('#id_est').val(),
           responsable_actual      : $('#responsable_actual').val(),
-          usuario                 : $('#usuario').val(),
+          usuario_actual          : $('#usuario_actual').val(),
           bloque_actual           : $('#bloque_actual').val(),
           piso_actual             : $('#piso_actual').val(),
           cubiculo_actual         : $('#cubiculo_actual').val(),
@@ -617,7 +617,7 @@ $('#btnmodificar_reubicado_enviar_email').click(
           proceso_equipo_retirar  : $('#proceso_equipo_retirar').val(),
           responsable             : $('#responsable').val(),
           email_nuevo_responsable : $('#email_nuevo_responsable').val(),
-          nuevo_usuario           : $('#nuevo_usuario').val(),
+          usuario                 : $('#usuario').val(),
           email_nuevo_usuario     : $('#email_nuevo_usuario').val(),
           bloque                  : $('#bloque').val(),
           piso                    : $('#piso').val(),
@@ -679,7 +679,7 @@ $('.consultar_reubicacion').focusout(
             $('#id_pri').val( data['prioridad'] );
 
             $('#responsable_actual').val( data['responsable_actual'] );
-            $('#usuario').val( data['usuario'] );
+            $('#usuario_actual').val( data['usuario_actual'] );
 
             $('#bloque_actual').val( data['bloque_actual'] );
             $('#piso_actual').val( data['piso_actual'] );
@@ -695,7 +695,7 @@ $('.consultar_reubicacion').focusout(
 
             $('#responsable').val( data['responsable'] );
             $('#email_nuevo_responsable').val( data['email_nuevo_responsable'] );
-            $('#nuevo_usuario').val( data['nuevo_usuario'] );
+            $('#usuario').val( data['usuario'] );
             $('#email_nuevo_usuario').val( data['email_nuevo_usuario'] );
             $('#nuevo_ext_tel').val( data['nuevo_ext_tel'] );
 

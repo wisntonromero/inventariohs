@@ -16,7 +16,7 @@
     $id_est                 = $_POST['estado_equipo'];
 
     $responsable_actual     = $_POST['responsable_actual'];
-    $usuario                = $_POST['usuario'];
+    $usuario_actual         = $_POST['usuario_actual'];
 
     $bloque_actual          = $_POST['bloque_actual'];
     $piso_actual            = $_POST['piso_actual'];
@@ -28,7 +28,7 @@
     $proceso_equipo_retirar = $_POST['proceso_equipo_retirar'];
 
     $responsable            = $_POST['responsable'];
-    $nuevo_usuario          = $_POST['nuevo_usuario'];
+    $usuario                = $_POST['usuario'];
     $bloque                 = $_POST['bloque'];
     $piso                   = $_POST['piso'];
     $cubiculo               = $_POST['cubiculo'];
@@ -90,7 +90,7 @@ $mail->Body = 	'Favor hacer reserva de IP por cambio de equipo : '. "\r\n" . "\r
 				'Dirección Mac 			: '. "$dir_mac". "\r\n" .
 				'Punto de red 			: '. "$nuevo_punto_de_red". "\r\n" .
 				'Responsable del equipo : '. "$responsable". "\r\n" .
-                'Usuario del equipo 	: '. "$nuevo_usuario". "\r\n" .
+                'Usuario del equipo 	: '. "$usuario". "\r\n" .
 				//'Departamento 			: '. "$departamento". "\r\n" .
 				'Bloque 				: '. "$bloque". "\r\n" .
 				'Piso 					: '. "$piso". "\r\n" .

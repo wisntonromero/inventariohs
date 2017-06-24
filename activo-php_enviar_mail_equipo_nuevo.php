@@ -63,15 +63,15 @@ $mail->Username = ($_SESSION['correo']);
 //Password to use for SMTP authentication
 $mail->Password = base64_decode(($_SESSION['contrasena']));
 //Set who the message is to be sent from
-$mail->setFrom('weromero@uninorte.edu.co', 'Winston Elias Romero Duarte');
+$mail->setFrom($_SESSION['correo'], $_SESSION['nombre']);
 //Set an alternative reply-to address
-$mail->addReplyTo('weromero@uninorte.edu.co', 'Winston Elias Romero Duarte');
+$mail->addReplyTo($_SESSION['correo'], $_SESSION['nombre']);
 //Set who the message is to be sent to
 $mail->addAddress('csu@uninorte.edu.co', 'csu@uninorte.edu.co');
 $mail->AddCC("mierg@uninorte.edu.co", "Gustavo Adolfo Mier Silva");
-$mail->AddCC("weromero@uninorte.edu.co", "Winston Elias Romero Duarte");
+$mail->AddCC($_SESSION['correo'], $_SESSION['nombre']);
 //Set the subject line
-$mail->Subject = 'SOLICITUD RESERVA- Favor hacer reserva de ip a este equipo NUEVO :  ' . "$activo_equipo";
+$mail->Subject = 'SOLICITUD RESERVA - Favor hacer reserva de ip a este equipo NUEVO :  ' . "$activo_equipo";
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
 //$mail->msgHTML(file_get_contents('inicio.php'), dirname(__FILE__));

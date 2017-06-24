@@ -184,8 +184,8 @@ include_once("menu.php");
 		    	<input type="text" name="responsable_actual" id="responsable_actual" style="text-transform: uppercase;" value="" placeholder="Obligatorio responsable del equipo">
 		    </div>
 	   		<div class="columns large-4">
-	        	<label for="usuario">Usuario</label>
-	        	<input type="text" name="usuario" id="usuario" style="text-transform: uppercase;" value="" placeholder="Obligatorio usuario del equipo">
+	        	<label for="usuario_actual">Usuario</label>
+	        	<input type="text" name="usuario_actual" id="usuario_actual" style="text-transform: uppercase;" value="" placeholder="Obligatorio usuario del equipo">
 	      	</div>
 		    <div class="columns large-4">
 		    	<label for="ext_tel"> </label>
@@ -315,8 +315,8 @@ include_once("menu.php");
 		    	<input type="text" name="responsable" id="responsable" style="text-transform: uppercase;" value="" placeholder="Obligatorio responsable del equipo">
 		    </div>
 	   		<div class="columns large-4">
-	        	<label for="nuevo_usuario">Usuario</label>
-	        	<input type="text" name="nuevo_usuario" id="nuevo_usuario" style="text-transform: uppercase;" value="" placeholder="Obligatorio usuario del equipo">
+	        	<label for="usuario">Usuario</label>
+	        	<input type="text" name="usuario" id="usuario" style="text-transform: uppercase;" value="" placeholder="Obligatorio usuario del equipo">
 	      	</div>
 		    <div class="columns large-4">
 		    	<label for="nuevo_ext_tel">Extension telefónica </label>

@@ -30,8 +30,8 @@ Nicolás Pardo - 2007
 
         $responsable_actual     = $_POST['responsable_actual'];
         $responsable            = $_POST['responsable'];
+        $usuario_actual         = $_POST['usuario_actual'];
         $usuario                = $_POST['usuario'];
-        $nuevo_usuario          = $_POST['nuevo_usuario'];
         $ext_tel                = $_POST['ext_tel'];
 
         $bloque_actual          = $_POST['bloque_actual'];
@@ -59,7 +59,7 @@ $query = "SELECT (@numero:=@numero+1) AS Items, reu_activo AS activo_equipo, tip
 marcas.mar_descripcion AS marca_de_equipo, reu_modelo_equipo AS modelo_equipo, prioridades.pri_descripcion AS prioridad_del_equipo,
 reu_activo_monitor AS activo_monitor, estado.est_descripcion AS estado_del_equipo,
 reu_activo_equipo_retirar AS activo_equipo_a_retirar, reu_activo_monitor_retirar AS activo_monitor_a_retirar,
-procesos.pro_descripcion AS proceso_del_equipo, reu_responsable AS responsable_anterior, reu_usuario AS usuario_anterior, reu_bloque AS bloque,
+procesos.pro_descripcion AS proceso_del_equipo, reu_responsable AS responsable_actual, reu_usuario AS usuario_actual, reu_bloque AS bloque,
 reu_piso AS piso, reu_cubiculo AS cubiculo, reu_dir_ip AS dir_ip, reu_dir_mac AS dir_mac,
 reu_nuevo_responsable AS nuevo_responsable, reu_nuevo_usuario AS nuevo_usuario, reu_nuevo_bloque AS nuevo_bloque, reu_nuevo_piso AS nuevo_piso, reu_nuevo_cubiculo AS nuevo_cubiculo,
 reu_ot_sigma AS Ot_de_Servicio, reu_observacion AS observaciones, reu_f_ult_actualizacion AS Fecha_ultima_actualizacion FROM (SELECT @numero:=0) r,reubicaciones
@@ -68,7 +68,16 @@ LEFT JOIN marcas ON reubicaciones.reu_marca_equipo = marcas.mar_id
 LEFT JOIN prioridades ON reubicaciones.reu_prioridad = prioridades.pri_id
 LEFT JOIN estado ON reubicaciones.reu_estado_equipo = estado.est_id
 LEFT JOIN procesos ON reubicaciones.reu_proceso_equipo_retirar = procesos.pro_id
-WHERE reu_activo LIKE '%$activo_equipo%' AND reu_activo_monitor LIKE '%$activo_monitor' AND reu_activo_equipo_retirar LIKE '%$activo_equipo_retirar%' AND reu_activo_monitor_retirar LIKE '%$activo_monitor_a_retirar%' AND  reu_responsable LIKE '%$responsable_actual%' AND reu_usuario LIKE '%$usuario_anterior%' AND  reu_nuevo_responsable LIKE '%$responsable%' AND reu_nuevo_usuario LIKE '%$nuevo_usuario%' AND  reu_estado_equipo LIKE '%$id_est%'";
+WHERE 
+reu_activo LIKE '%$activo_equipo%' AND 
+reu_activo_monitor LIKE '%$activo_monitor' AND 
+reu_activo_equipo_retirar LIKE '%$activo_equipo_retirar%' AND 
+reu_activo_monitor_retirar LIKE '%$activo_monitor_a_retirar%' AND  
+reu_responsable LIKE '%$responsable_actual%' AND 
+reu_usuario LIKE '%$usuario_actual%' AND  
+reu_nuevo_responsable LIKE '%$responsable%' AND 
+reu_nuevo_usuario LIKE '%$usuario%' AND  
+reu_estado_equipo LIKE '%$id_est%'";
 
 
 $r = mysql_query($query,$conexion);
