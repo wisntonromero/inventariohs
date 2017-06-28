@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <script type="text/javascript" src="resources/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="resources/functions.js"></script>
+        <script type="text/javascript" src="js/soporte-functions.js"></script>
         <link rel="stylesheet" href="resources/style.css" />
         <link rel="stylesheet" href="css/foundation.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

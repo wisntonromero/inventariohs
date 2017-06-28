@@ -115,3 +115,42 @@
 #nav ul.dd li a:active + ul,#nav ul.dd li a:focus + ul,#nav ul.dd li ul:hover {
     left:120px; /* posocion o espaciado en colomnas del sub-menu */ 
 }
+
+/* Footer
+--------------------------------------------------------------------------------------------------------------- */
+#footer{padding:80px 0 60px;}
+
+#footer .title{margin:0 0 50px 0; padding:0; font-size:1.2rem; text-transform:uppercase;}
+
+#footer .linklist li{display:block; margin-bottom:15px; padding:0 0 15px 0; border-bottom:1px solid;}
+#footer .linklist li:last-child{margin:0; padding:0; border:none;}
+#footer .linklist li::before, #footer .linklist li::after{display:table; content:"";}
+#footer .linklist li, #footer .linklist li::after{clear:both;}
+
+#footer .contact{}
+#footer .contact.linklist li, #footer .contact.linklist li:last-child{position:relative; padding-left:40px;}
+#footer .contact li *{margin:0; padding:0; line-height:1.6;}
+#footer .contact li i{display:block; position:absolute; top:0; left:0; width:30px; font-size:16px; text-align:center;}
+
+#footer input, #footer button{border:1px solid;}
+#footer input{display:block; width:100%; padding:8px;}
+#footer button{padding:8px 18px 10px; text-transform:uppercase; font-weight:700; cursor:pointer;}
+
+
+#footer .title{color:#FFFFFF;}
+#footer .linklist li{border-color:#394251;}
+
+#footer input, #footer button{border-color:transparent;}
+#footer input{color:#FFFFFF; background-color:#394251;}
+#footer input:focus{border-color:#82B440;}
+#footer button{color:#FFFFFF; background-color:#82B440;}
+
+
+
+/* Copyright
+--------------------------------------------------------------------------------------------------------------- */
+#copyright{border-color:#394251;}
+#copyright{padding:20px 0; border-top:1px solid;}
+#copyright *{margin:0; padding:0;}
+
+
