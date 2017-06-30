@@ -495,7 +495,7 @@ include_once("menu.php");
 	<script src="js/usuario.js"></script>
 	<script src="js/reubicacion.js"></script>
 	<script src="js/red.js"></script>
-	<script src="js/activo.js"></script>
+	
 	<script src="js/switches.js"></script>
 	<script>
     	$(document).foundation();
