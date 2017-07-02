@@ -31,7 +31,6 @@ $('#seleccionar_correo').change(
         });
   });
 
-
 // correo Usuario
 $('#seleccionar_correo2').change(
   function ()
@@ -136,5 +135,3 @@ $('#seleccionar_correo3').change(
           }
         });
   });
-
-
