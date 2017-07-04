@@ -143,7 +143,50 @@
                               </ul>
                             </li>
 
-                            <li><a href="form_mantenimiento.php">Mantto</a></li>
+                             <li><a class="fly" href="#">Mantto</a>
+                                <ul class="dd">
+                                    <li><a class="fly" href="#">Usuarios del Sistema</a>
+                                        <ul>
+                                            <li><a href="#" >Ingresar Usuario</a></li>
+                                            <li><a href="#" >Consultar / Modificar Usuario</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a class="fly" href="#">Clientes</a>
+                                        <ul>
+                                            <li><a href="cliente-form_ingresar_cliente.php" >Ingresar / Consultar  / Modificar Correos clientes</a></li>
+                                            <li><a href="#" >Disponible</a></li>
+                                            <li><a href="#" >Disponible</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a class="fly" href="#">Correos</a>
+                                        <ul>
+                                            <li><a href="correo-form-ingresar_correo-institucional.php" >Ingresar / Consultar  / Modificar Correos clientes</a></li>
+                                            <li><a href="correo-form-importar_correo_institucional_desde_archivo_csv.php" >Importar correos institucional desde archivo CSV</a></li>
+                                            <li><a href="#" >Disponible</a></li>
+                                            <li><a href="#" >Disponible</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="fly" href="#">Centros de Cableados</a> <!-- Menu lado derecho -->
+                                        <ul>
+                                            <li><a href="c_cableado-form_ingresar_c_cableado.php" >Ingresar / Modificar Centro de Cableado</a></li>
+                                            <li><a href="#" >Disponible</a></li>
+                                            <li><a href="#" >Disponible</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a class="fly" href="#">Disponible</a> <!-- Menu lado derecho -->
+                                        <ul>
+                                            <li><a href="#" >Disponible</a></li>
+                                            <li><a href="#" >Disponible</a></li>
+                                        </ul>
+                                    </li>
+                                   
+                                </ul>
+                            </li>
+
+
                             <li><a href="acceso-php_logout.php">Cerrar sesion</a></li>
                         </ul>
                     </div>

@@ -732,6 +732,65 @@ $('.consultar_reubicacion').focusout(
   });
 
 
+
+$('#enviar_mail_equipo_nuevo_reubicacion').click(
+  function ()
+  {
+     if($('#activo_equipo').val()==""){
+      alert("Por favor introduce el numero del activo");
+      return false;
+    }
+    $.ajax({
+                  url     :"activo-php_enviar_mail_equipo_nuevo.php",
+                  dataType:"json",
+                  type    :'post',
+                  data:{
+                  activo_equipo:$('#activo_equipo').val(),
+                  tipo_equipo:$('#tipo_equipo').val(),
+                  marca_equipo:$('#marca_equipo').val(),
+                  modelo_equipo:$('#modelo_equipo').val(),
+                  activo_mon:$('#activo_mon').val(),
+                  estado_equipo:$('#estado_equipo').val(),
+                  dir_ip:$('#dir_ip').val(),
+                  dir_mac:$('#dir_mac').val(),
+                  punto_de_red:$('#punto_de_red').val(),
+                  bloque:$('#bloque').val(),
+                  piso:$('#piso').val(),
+                  cubiculo:$('#cubiculo').val(),
+                  dir_ip_sw:$('#dir_ip_sw').val(),
+                  puerto_sw:$('#puerto_sw').val(),
+                  vlan_puerto_sw:$('#vlan_puerto_sw').val(),
+                  f_ult_actualiza:$('#f_ult_actualiza').val(),
+                  departamento:$('#departamento').val(),
+                  responsable:$('#responsable').val(),
+                  usuario:$('#usuario').val(),
+                  ext_tel:$('#ext_tel').val(),
+                  observaciones:$('#observaciones').val()
+                  },
+
+                  success:function(data){
+                    if(data > 1){
+                      $('#res').html("---- El mensaje se envio con exito al usuario. ----");
+                      $('#res').css('color','yellow');
+                    }
+                    else{
+                      $('#res').html("Ha ocurrido un error al enviar el mensaje, verifique su conexion a internet.");
+                      $('#res').css('color','red');
+                    }
+                  },
+                  error:function() {
+                    //alert("Activo no encontrado modulo mail.")
+                    $('#res').html("---- El mensaje se envio al usuario. ----");
+                    console.log('Something went wrong', status, 'Activo no encontrado.' );
+                  }
+                });
+  }
+);
+
+
+
+
+
   //PUNTOS DE RED
   function letrasynumeros(e){
     key = e.keyCode || e.which;

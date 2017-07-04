@@ -456,8 +456,8 @@ include_once("menu.php");
 	        </div>
 
 	        <div class="columns large-2">
-          		<label for="enviar_mail_equipo_nuevo">&nbsp;</label>
-          		<input type="button" name="enviar_mail_equipo_nuevo" id="enviar_mail_equipo_nuevo" value="Reserva de IP" class="button">
+          		<label for="enviar_mail_equipo_nuevo_compras">&nbsp;</label>
+          		<input type="button" name="enviar_mail_equipo_nuevo_compras" id="enviar_mail_equipo_nuevo_compras" value="Reserva de IP" class="button">
         	</div>
 	    </div>
 	</form>
@@ -465,7 +465,6 @@ include_once("menu.php");
 	<script src="js/vendor/jquery.js"></script>
   	<script src="js/foundation.min.js"></script>
 	<script src="js/compras.js"></script>
-	<script src="js/activo.js"></script>
 	<script src="js/marcas.js"></script>
 	<script src="js/tipo_equipo.js"></script>
 	<script src="js/prioridades.js"></script>

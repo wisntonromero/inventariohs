@@ -478,8 +478,8 @@ include_once("menu.php");
 	        </div>
 
 	         <div class="columns large-2">
-          		<label for="enviar_mail_equipo_nuevo">&nbsp;</label>
-          		<input type="button" name="enviar_mail_equipo_nuevo" id="enviar_mail_equipo_nuevo" value="Reserva de IP" class="button">
+          		<label for="enviar_mail_equipo_nuevo_reubicacion">&nbsp;</label>
+          		<input type="button" name="enviar_mail_equipo_nuevo_reubicacion" id="enviar_mail_equipo_nuevo_reubicacion" value="Reserva de IP" class="button">
         	</div>
 	    </div>
 	</form>
