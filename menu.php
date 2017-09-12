@@ -147,8 +147,8 @@
                                 <ul class="dd">
                                     <li><a class="fly" href="#">Usuarios del Sistema</a>
                                         <ul>
-                                            <li><a href="#" >Ingresar Usuario</a></li>
-                                            <li><a href="#" >Consultar / Modificar Usuario</a></li>
+                                            <li><a href="usuario-form_ingresar_usuario.php" >Ingresar Usuario</a></li>
+                                            <li><a href="usuario-php_modificar_usuario" >Consultar / Modificar Usuario</a></li>
                                         </ul>
                                     </li>
 
