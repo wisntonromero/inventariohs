@@ -157,7 +157,7 @@ include_once("sesion.php");
                   mysql_select_db($database);
                   $id = $_POST['id'];
                   //$sql=mysql_query("select id,data from data where weight='1'");
-                  $query = "SELECT * FROM hardware WHERE estado_equipo != 'ACTIVO' AND estado_equipo != 'DAÑADO' AND tipo_equipo = 'SWITCH' ORDER BY estado_equipo ASC  ";
+                  $query = "SELECT * FROM hardware WHERE estado_equipo != 'ACTIVO' AND estado_equipo != 'DAÑADO' AND estado_equipo != 'DE BAJA' AND tipo_equipo = 'SWITCH' ORDER BY estado_equipo ASC  ";
                   $resultado = mysql_query($query,$conexion);
                   $numero_de_filas = mysql_num_rows($resultado);
                   //$registro=mysql_fetch_array($resultado);//// no se coloca
