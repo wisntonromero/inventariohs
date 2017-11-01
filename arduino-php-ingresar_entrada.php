@@ -26,7 +26,5 @@ echo "El Segundo Parametro es :" . $parametro2 . "<br />";
   mysql_select_db("inventario", $conexion); // Select the database
 //  mysql_query ("INSERT INTO arduino_bitacora('id_usuario') VALUES ('".$_GET["parametro1"]."')",$conexion); 
 mysql_query ("INSERT INTO `arduino_bitacora`(`id_usuario`) VALUES ('".$_GET["parametro1"]."')",$conexion);
-."')",$conexion); 
-
 
 ?>
