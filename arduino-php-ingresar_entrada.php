@@ -22,6 +22,8 @@ $parametro2=$_GET['parametro2'];
 <head>
 </head>
 <body>
+  
+</body>
 <?php
 echo "El Primer Parametro es :" . $parametro1 . "<br />";
 echo "El Segundo Parametro es :" . $parametro2 . "<br />";
@@ -30,4 +32,3 @@ echo "El Segundo Parametro es :" . $parametro2 . "<br />";
   mysql_select_db("inventario", $conexion); // Select the database
   mysql_query ("INSERT INTO arduino_bitacora('id_usuario') VALUES ('".$_GET["parametro1"]."')",$conexion); 
 ?>
-</body>
