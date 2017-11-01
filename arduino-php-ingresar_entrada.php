@@ -1,4 +1,33 @@
-      
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <script type="text/javascript" src="resources/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="resources/functions.js"></script>
+        <script type="text/javascript" src="js/soporte-functions.js"></script>
+        <link rel="stylesheet" href="resources/style.css" />
+        <link rel="stylesheet" href="css/foundation.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SIPRED</title>    
+    </head>
+
+    <body>
+        <div class="row">
+            <div class="columns large-10">
+              <h1>
+                <img style="width: 203px; height: 146px margin: -55px -216px -112px -140px;" src="./images/jpg/logo.jpg" alt="Logo Universidad del Norte."/> 
+              </h1>
+
+            </div>
+
+            <div class="columns large-2">
+                <img style="width: 60px; height: 146px margin: -55px -216px -112px -140px;" src="<?php echo $_SESSION['ubicacion_foto'];  ?>">
+                <?php echo $_SESSION['usuario'];?>
+            </div>
+        </div>
+        <header style="text-align:center";> 
+        <h4>SIPRED - SISTEMA DE INVENTARIO DE PUNTOS DE RED</h4>    
+        </header>
 
 
       <form method="post" action="">
@@ -73,36 +102,5 @@
     $(document).foundation();
   </script>
 
+</html>
 
-      
-<?php
-    $server = "localhost";
-    $database = "inventario"; //nombre de la base de datos que estas usando para el proyecto
-    $username = "root"; // nombre del usuario con el que te conectas a esa base de datos
-    $password = "root"; // la password de dicho usuario
-  
-
-    date_default_timezone_set("America/Bogota");
-    header('Content-Type: application/json');
-
-    $conexion = mysql_connect($server,$username,$password);
-    mysql_select_db($database) or die("Oops! Coudn't select Database"); // Select the database
-    mysql_set_charset('utf8',$conexion);
- 
-    $id_usuario = ($_GET['id_usuario'],ENT_QUOTES);
-    $id_usuario = mysqli_real_escape_string($id_usuario);
-    $permiso    = ($_GET['permiso'],ENT_QUOTES);
-   
-    $query = "INSERT INTO arduino_bitacora(id_usuario, fecha_hora, permiso) VALUES ('".$_GET["id_usuario"]."',now(), '".$_GET["permiso"]."')";  
-      
-    $resultado = mysql_query($query,$conexion);
-    
-    if(mysql_affected_rows()>0){
-        echo "add";
-    }
-    else{
-        echo "2";
-    }
-    mysql_close($conexion);
-?>
- 
