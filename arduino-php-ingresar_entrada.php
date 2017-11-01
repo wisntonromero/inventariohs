@@ -6,8 +6,8 @@
     mysql_set_charset('utf8',$conexion);
     mysql_select_db($database);
 
-    $id_usuario = $_GET['id_usuario'];
-    $permiso    = $_GET['permiso'];
+    $id_usuario = ($_GET['id_usuario'],ENT_QUOTES);
+    $permiso    = ($_GET['permiso'],ENT_QUOTES);
    
     $query = "INSERT INTO arduino_bitacora(id_usuario, fecha_hora, permiso) VALUES ('".$_GET["id_usuario"]."',now(), '".$_GET["permiso"]."')";  
       
