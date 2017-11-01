@@ -13,6 +13,7 @@
     mysql_set_charset('utf8',$conexion);
  
     $id_usuario = ($_GET['id_usuario'],ENT_QUOTES);
+    $id_usuario = mysqli_real_escape_string($id_usuario);
     $permiso    = ($_GET['permiso'],ENT_QUOTES);
    
     $query = "INSERT INTO arduino_bitacora(id_usuario, fecha_hora, permiso) VALUES ('".$_GET["id_usuario"]."',now(), '".$_GET["permiso"]."')";  
