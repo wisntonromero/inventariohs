@@ -38,11 +38,7 @@
                 <input type="text" name="correo" id="correo" placeholder="Suministrado por el sistema">
               </div>            
      
-              <div class="columns large-2">
-                <label for="consultar_cliente">Consultar</label>
-                 <input type="button" name="consultar_cliente" id="consultar_cliente" value="Consultar" class="button">
-              </div>
-
+             
               <div class="columns large-4">
                 <label for="cliente">Nombre del cliente</label>
                 <input type="text" name="cliente" id="cliente" placeholder="Suministrado por el sistema">
@@ -75,22 +71,7 @@
             </div>
           </div>
         
-           <div class="row">
-            <div class="columns large-2">
-              <label for="ingresar_cliente">&nbsp;</label>
-              <input type="button" name="ingresar_cliente" id="ingresar_cliente" value="Ingresar cliente" class="button">
-            </div>
-
-            <div class="columns large-2">
-              <label for="modificar_cliente">&nbsp;</label>
-              <input type="button" name="modificar_cliente" id="modificar_cliente" value="Modificar cliente" class="button">
-            </div>
-
-            <div class="columns large-2">
-              <label for="limpiar_forma">&nbsp;</label>
-              <input type="submit" href="cliente-form_ingresar_cliente.php" name="limpiar_forma" id="limpiar_forma" value="Consultar otro cliente" class="button">
-            </div>
-          </div>
+          
       </form>
     </div>
   </div>
