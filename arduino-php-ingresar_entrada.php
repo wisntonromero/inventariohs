@@ -1,5 +1,5 @@
 
-      
+<!--      
 <?php
    
     $conexion = mysql_connect("localhost","root","root");
@@ -9,5 +9,21 @@
   //mysql_query =("INSERT INTO arduino_bitacora(id_usuario, fecha_hora, permiso) VALUES ('".$_GET["id_usuario"]."',now(), '".$_GET["permiso"]."')";  
       
    
+?> -->
+ 
+
+<?php
+$parametro1=$_GET['parametro1'];
+$parametro2=$_GET['parametro2'];
+ 
 ?>
  
+<html>
+<head>
+</head>
+<body>
+<?php
+echo "El Primer Parametro es :" . $parametro1 . "<br />";
+echo "El Segundo Parametro es :" . $parametro2 . "<br />";
+?>
+</body>
