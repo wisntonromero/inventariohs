@@ -14,6 +14,10 @@
     mysql_select_db($database) or die("Oops! Coudn't select Database"); // Select the database
     mysql_set_charset('utf8',$conexion);
  
+    $id_usuario = "SDSFS";
+    $id_usuario = "DFDSF";
+    $permiso    = "AAAA";
+
     $id_usuario = ($_GET['id_usuario'],ENT_QUOTES);
     $id_usuario = mysqli_real_escape_string($id_usuario);
     $permiso    = ($_GET['permiso'],ENT_QUOTES);
