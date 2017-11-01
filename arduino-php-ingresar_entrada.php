@@ -16,10 +16,7 @@
 $parametro1=$_GET['parametro1'];
 $id_usuario=$_GET['id_usuario'];
  
-?>
-
-<?php
-echo "El Primer Parametro es :" . $parametro1 . "<br />";
+echo "El Primer Parametro es :" . $id_usuario . "<br />";
 echo "El Segundo Parametro es :" . $parametro2 . "<br />";
 
   $conexion = mysql_connect("localhost","root","root");
