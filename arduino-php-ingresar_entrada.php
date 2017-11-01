@@ -1,11 +1,17 @@
 <?php
-    include('config.php');
+    $server = "localhost";
+    $database = "inventario"; //nombre de la base de datos que estas usando para el proyecto
+    $username = "root"; // nombre del usuario con el que te conectas a esa base de datos
+    $password = "root"; // la password de dicho usuario
+  
+
+    date_default_timezone_set("America/Bogota");
     header('Content-Type: application/json');
 
     $conexion = mysql_connect($server,$username,$password);
+    mysql_select_db($database) or die("Oops! Coudn't select Database"); // Select the database
     mysql_set_charset('utf8',$conexion);
-    mysql_select_db($database);
-
+ 
     $id_usuario = ($_GET['id_usuario'],ENT_QUOTES);
     $permiso    = ($_GET['permiso'],ENT_QUOTES);
    
