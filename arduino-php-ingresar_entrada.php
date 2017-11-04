@@ -1,8 +1,8 @@
-<?php
-$id_usuario = $_GET['id_usuario'];
-$permiso    = $_GET['permiso'];
+<!-- //<?php
+//$id_usuario = $_GET['id_usuario'];
+//$permiso    = $_GET['permiso'];
  
-?>
+?> -->
 
 <?php
   $conexion = mysql_connect("localhost","root","root");
