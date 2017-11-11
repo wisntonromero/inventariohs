@@ -84,7 +84,7 @@
                                     <li><a href="compras-form_modificar_compras.php" >Modificar Compra por Activo</a></li>
                                     <li><a href="compras-form_consultar_equipos_por_orden_compra.php" >Consultar por Criterios</a></li>
                                     <li><a href="compras-form_modificar_estado_de_equipos_por_lotes.php" >Modificar Estado por Lotes</a></li>
-                                    <li><a href="frmbitacora.php" > Consultar Bitacora</a></li>
+                                    <li><a href="bitacora-form_bitacora.php" > Consultar Bitacora</a></li>
                               </ul>
                             </li>
 
@@ -93,7 +93,7 @@
                                     <li><a href="reubicacion-form_ingresar_reubicacion.php" >Ingresar</a></li>
                                     <li><a href="reubicacion-form_modificar_reubicacion.php" >Consultar / Modificar</a></li>
                                     <li><a href="reubicacion-form_consultar_equipos_por_estado.php" >Consultar por Criterios</a></li>
-                                    <li><a href="frmbitacora.php" > Consultar Bitacora</a></li>
+                                    <li><a href="bitacora-form_bitacora.php" > Consultar Bitacora</a></li>
                                 </ul>
                             </li>
 
