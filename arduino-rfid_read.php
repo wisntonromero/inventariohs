@@ -7,8 +7,8 @@ class rfid{
  }
  
  function connect(){
-  $this->link = mysql_connect('localhost','database_username','DB_PASSWARD') or die('Cannot connect to the DB');
-  mysql_select_db('DATABASE_NAME') or die('Cannot select the DB');
+  $this->link = mysql_connect('localhost','inventario','root') or die('Cannot connect to the DB');
+  mysql_select_db('inventario') or die('Cannot select the DB');
  }
  
  function storeInDB($allow, $id){
