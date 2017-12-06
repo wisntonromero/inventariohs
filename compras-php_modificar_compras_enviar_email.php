@@ -102,12 +102,14 @@
     $mail->addReplyTo($_SESSION['correo'], $_SESSION['nombre']);
     //Set who the message is to be sent to
     $mail->addAddress("trasladosybajas@uninorte.edu.co", "Traslados y Bajas Uninorte");
+    $mail->addAddress("soportedealmacen@uninorte.edu.co", "Soporte Almacen ");
+    $mail->addAddress("coordinadordeactivos@uninorte.edu.co", "Coordinador de Activos");
+    $mail->addAddress("recepciondeactivos@uninorte.edu.co", "Recepcion de Activos");
     $mail->addAddress("coordinadorequipoinformatico@uninorte.edu.co", "Coordinador Equipo Informatico");
     $mail->addAddress("egaliano@uninorte.edu.co", "Emma Beatriz Galiano Vargas");
     $mail->addAddress("$email_responsable", "$responsable");
     $mail->addAddress("$email_usuario", "$usuario");
-    $mail->AddCC("recepciondeactivos@uninorte.edu.co", "Recepcion de Activos");
-    $mail->AddCC($_SESSION['correo'], $_SESSION['nombre']);
+    $mail->addAddress($_SESSION['correo'], $_SESSION['nombre']);
     //Set the subject line
     $mail->Subject = 'ENTREGA DE ACTIVO :  ' . "$activo_equipo";
     //Read an HTML message body from an external file, convert referenced images to embedded,
