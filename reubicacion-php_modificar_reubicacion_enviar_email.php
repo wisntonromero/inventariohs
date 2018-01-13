@@ -55,7 +55,7 @@
     $query = "UPDATE reubicaciones SET reu_activo='$activo_equipo', reu_tipo_equipo='$id_tip', reu_marca_equipo='$id_mar', reu_modelo_equipo='$modelo_equipo',
     reu_activo_monitor='$activo_monitor',reu_estado_equipo='$id_est',reu_prioridad='$id_pri',reu_responsable='$responsable_actual', reu_usuario='$usuario_actual',
     reu_bloque='$bloque_actual', reu_piso='$piso_actual', reu_cubiculo='$cubiculo_actual', reu_activo_equipo_retirar='$activo_equipo_retirar', reu_activo_monitor_retirar='$activo_monitor_retirar',
-    reu_proceso_equipo_retirar='$id_pro', reu_nuevo_responsable='$responsable', reu_email_nuevo_responsable='$email_nuevo_responsable', reu_nuevo_usuario='$nuevo_usuario', reu_email_nuevo_usuario='$email_nuevo_usuario', reu_nuevo_bloque='$bloque', reu_nuevo_piso='$piso',
+    reu_proceso_equipo_retirar='$id_pro', reu_nuevo_responsable='$responsable', reu_email_nuevo_responsable='$email_nuevo_responsable', reu_nuevo_usuario='$usuario', reu_email_nuevo_usuario='$email_nuevo_usuario', reu_nuevo_bloque='$bloque', reu_nuevo_piso='$piso',
     reu_nuevo_cubiculo='$cubiculo', reu_dir_ip='$dir_ip', reu_dir_mac='$dir_mac', reu_punto_de_red='$punto_de_red', reu_extension='$nuevo_ext_tel', reu_ot_sigma='$ot_sigma',
     reu_activo_soporte='$activo_equipo_soporte', reu_observacion='$observaciones', reu_f_ult_actualizacion=NOW() WHERE reu_id='$reu_id'";
     $resultado1 = mysql_query($query,$conexion);
