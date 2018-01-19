@@ -307,7 +307,7 @@ class Cliente
 			                            'La fecha de la devolución del equipo 		: '."$this->f_recibido" . "\r\n" .
 			                            'Usuario al que se le retira el equipo		: '."$this->usuario_equipo". "\r\n" .
 			                            'Tecnico que devuelve el equipo a bodega 	: '."$this->usuario_tecnico". "\r\n" .
-			                            'Tecnico que ingresa el equipo a bodega 		: '."$this->usuario_que_presta_soporte". "\r\n" .  "\r\n" .
+			                            'Tecnico que ingresa el equipo a bodega 		: '."$this->$_SESSION['nombre']". "\r\n" .  "\r\n" .
 			                            'Nota importante.'. "\r\n" .
 			                            'Con este E-mail queda nota de que el técnico entrego el equipo a su bodega correspondiente.'. "\r\n" .
 			                            'Este E-mail es enviado automáticamente desde el sistema de Inventario de equipos del Laboratorio de Micros.' ;//Mensaje de 2 lineas
