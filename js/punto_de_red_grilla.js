@@ -127,7 +127,9 @@ DatabaseGrid.prototype.addRow = function(id)
 			tablename : self.editableGrid.name,
 			punto_de_red:  $("#punto_de_red").val(),
 			bloque:  $("#bloque").val(),
-			piso:  $("#piso").val()
+			piso:  $("#piso").val(),
+			cubiculo:  $("#cubiculo").val(),
+			tipo_de_punto_de_red:  $("#tipo_de_punto_de_red").val()
 		},
 		success: function (response) 
 		{ 
@@ -138,6 +140,8 @@ DatabaseGrid.prototype.addRow = function(id)
         		$("#punto_de_red").val('');
                 $("#bloque").val('');
                 $("#piso").val('');
+                $("#cubiculo").val('');
+                $("#tipo_de_punto_de_red").val('');
 			    
                 alert("Row added : reload model");
                 self.fetchGrid();
