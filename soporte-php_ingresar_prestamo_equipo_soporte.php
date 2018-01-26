@@ -83,7 +83,7 @@
         //Set an alternative reply-to address
         $mail->addReplyTo($_SESSION['correo'], $_SESSION['nombre']);
         //Set who the message is to be sent to
-       // $mail->addAddress("$email_usuario", "$usuario_equipo");
+        $mail->addAddress("$email_usuario", "$usuario_equipo");
         $mail->AddCC("$email_usuario_tecnico", "$usuario_tecnico");
         $mail->AddCC("coordinadorequipoinformatico@uninorte.edu.co", "Alvaro Ivan Santiago Arellana");
         $mail->AddCC($_SESSION['correo'], $_SESSION['nombre']);
