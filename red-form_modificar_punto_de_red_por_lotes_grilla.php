@@ -14,9 +14,8 @@ include_once("menu.php");
             <div id="toolbar">
                 <div class="row">
                   <input type="text" id="filter" name="filter" autofocus=true placeholder="Filtro : Digite punto de red a consultar"  />
-                  
-                </div>
-              <a id="showaddformbutton" class="button green"><i class="fa fa-plus"></i> Ingresar Punto de red</a>
+                  <a id="showaddformbutton" class="button green"><i class="fa fa-plus"></i> Ingresar Punto de red</a>
+                </div>              
             </div>
 
         <!-- simple form, used to add a new row -->
