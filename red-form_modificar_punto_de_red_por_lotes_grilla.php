@@ -39,7 +39,7 @@ include_once("menu.php");
             </div>
 
             <div class="row">
-                <input type="text" id="Tipo de punto de red" name="Tipo de punto de red" placeholder="Tipo de punto de red" />
+                <input type="text" id="tipo_de_punto_de_red" name="Tipo de punto de red" placeholder="Tipo de punto de red" />
             </div>
 
             <div class="row tright">
