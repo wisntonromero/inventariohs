@@ -6,17 +6,18 @@ include_once("menu.php");
 
     
 		<div id="wrap">
-		<h5>Consulta y Modificación de puntos de red por lotes</h5> 
-		
+		<div class="row">
+        <h5>Consulta y Modificación de puntos de red por lotes</h5> 
+		</div>
 			<!-- Feedback message zone -->
 			<div id="message"></div>
 
-            <div id="toolbar">
-                <div class="row">
-                  <input type="text" id="filter" name="filter" autofocus=true placeholder="Filtro : Digite punto de red a consultar"  />
-                  <a id="showaddformbutton" class="button green"><i class="fa fa-plus"></i> Ingresar Punto de red</a>
-                </div>              
-            </div>
+        <div id="toolbar">
+            <div class="row">
+              <input type="text" id="filter" name="filter" autofocus=true placeholder="Filtro : Digite punto de red a consultar"  />
+              <a id="showaddformbutton" class="button green"><i class="fa fa-plus"></i> Ingresar Punto de red</a>
+            </div>              
+        </div>
 
         <!-- simple form, used to add a new row -->
         <div id="addform">
@@ -43,7 +44,7 @@ include_once("menu.php");
 
 
 			<!-- Grid contents -->
-			<div id="tablecontent"></div>
+			<div id="tablecontent" class="row"></div>
 		
 			<!-- Paginator control -->
 			<div id="paginator"></div>
