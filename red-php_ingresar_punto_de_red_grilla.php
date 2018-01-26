@@ -20,10 +20,12 @@ $mysqli->real_connect($config['db_host'],$config['db_user'],$config['db_password
 $punto_de_red = $mysqli->real_escape_string(strip_tags($_POST['punto_de_red']));
 $bloque = $mysqli->real_escape_string(strip_tags($_POST['bloque']));
 $piso = $mysqli->real_escape_string(strip_tags($_POST['piso']));
+$cubiculo = $mysqli->real_escape_string(strip_tags($_POST['cubiculo']));
+$tipo_de_punto_de_red = $mysqli->real_escape_string(strip_tags($_POST['tipo_de_punto_de_red']));
 $tablename = $mysqli->real_escape_string(strip_tags($_POST['tablename']));
 
 $return=false;
-if ( $stmt = $mysqli->prepare("INSERT INTO ".$tablename."  (punto_de_red, bloque, piso) VALUES (  ?, ?, ?)")) {
+if ( $stmt = $mysqli->prepare("INSERT INTO ".$tablename."  (punto_de_red, bloque, piso,cubiculo, tipo_de_punto_de_red) VALUES (  ?, ?, ?, ?, ?)")) {
 
 	$stmt->bind_param("sss", $punto_de_red, $bloque, $piso);
     $return = $stmt->execute();
