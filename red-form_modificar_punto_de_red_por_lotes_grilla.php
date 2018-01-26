@@ -34,6 +34,14 @@ include_once("menu.php");
                 <input type="text" id="piso" name="piso" placeholder="Piso" />
             </div>
 
+            <div class="row">
+                <input type="text" id="cubiculo" name="cubiculo" placeholder="Cubiculo" />
+            </div>
+
+            <div class="row">
+                <input type="text" id="Tipo de punto de red" name="Tipo de punto de red" placeholder="Tipo de punto de red" />
+            </div>
+
             <div class="row tright">
               <a id="addbutton" class="button green" ><i class="fa fa-save"></i> Ingresar</a>
               <a id="cancelbutton" class="button delete">Cancelar</a>
