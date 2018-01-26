@@ -130,6 +130,31 @@ include_once("menu.php");
               <input type="text" id="filter" name="filter" autofocus=true placeholder="Filtro : Digite punto de red a consultar"  />
               <a id="showaddformbutton" class="button green"><i class="fa fa-plus"></i> Ingresar Punto de red</a>
             </div>
+
+<!-- simple form, used to add a new row -->
+        <div id="addform">
+
+            <div class="row">
+                <input type="text" id="punto_de_red" name="punto_de_red" placeholder="Punto de red" />
+            </div>
+
+             <div class="row">
+                <input type="text" id="bloque" name="bloque" placeholder="Bloque" />
+            </div>
+
+            <div class="row">
+                <input type="text" id="piso" name="piso" placeholder="Piso" />
+            </div>
+
+            <div class="row tright">
+              <a id="addbutton" class="button green" ><i class="fa fa-save"></i> Ingresar</a>
+              <a id="cancelbutton" class="button delete">Cancelar</a>
+            </div>
+        </div>
+
+
+
+
 			<!-- Grid contents -->
 			<div id="tablecontent"></div>
 		
@@ -169,26 +194,7 @@ include_once("menu.php");
 			}; 
 		</script>
 
-        <!-- simple form, used to add a new row -->
-        <div id="addform">
-
-            <div class="row">
-                <input type="text" id="punto_de_red" name="punto_de_red" placeholder="Punto de red" />
-            </div>
-
-             <div class="row">
-                <input type="text" id="bloque" name="bloque" placeholder="Bloque" />
-            </div>
-
-            <div class="row">
-                <input type="text" id="piso" name="piso" placeholder="Piso" />
-            </div>
-
-            <div class="row tright">
-              <a id="addbutton" class="button green" ><i class="fa fa-save"></i> Ingresar</a>
-              <a id="cancelbutton" class="button delete">Cancelar</a>
-            </div>
-        </div>
+        
 
         <script src="js/vendor/jquery.js"></script>
         <script src="js/foundation.min.js"></script>
