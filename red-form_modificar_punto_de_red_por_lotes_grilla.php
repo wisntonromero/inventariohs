@@ -12,11 +12,14 @@ include_once("menu.php");
 			<div id="message"></div>
 
             <div id="toolbar">
-              <input type="text" id="filter" name="filter" autofocus=true placeholder="Filtro : Digite punto de red a consultar"  />
+                <div class="row">
+                  <input type="text" id="filter" name="filter" autofocus=true placeholder="Filtro : Digite punto de red a consultar"  />
+                  
+                </div>
               <a id="showaddformbutton" class="button green"><i class="fa fa-plus"></i> Ingresar Punto de red</a>
             </div>
 
-<!-- simple form, used to add a new row -->
+        <!-- simple form, used to add a new row -->
         <div id="addform">
 
             <div class="row">
