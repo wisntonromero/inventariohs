@@ -25,7 +25,7 @@ $tipo_de_punto_de_red = $mysqli->real_escape_string(strip_tags($_POST['tipo_de_p
 $tablename = $mysqli->real_escape_string(strip_tags($_POST['tablename']));
 
 $return=false;
-if ( $stmt = $mysqli->prepare("INSERT INTO ".$tablename."  (punto_de_red, bloque, piso,cubiculo, tipo_de_punto_de_red) VALUES (  ?, ?, ?, ?, ?)")) {
+if ( $stmt = $mysqli->prepare("INSERT INTO ".$tablename."  (punto_de_red, bloque, piso,cubiculo, tipo_de_punto_de_red) VALUES (?,?,?,?,?)")) {
 
 	$stmt->bind_param("sssss", $punto_de_red, $bloque, $piso, $cubiculo, $tipo_de_punto_de_red);
     $return = $stmt->execute();
