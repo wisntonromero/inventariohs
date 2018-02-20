@@ -49,7 +49,7 @@
 
                     if (mysql_num_rows($resultado) == 0)  
                     {  
-                        $sql = "INSERT IGNORE INTO $table(nombres, area, cargo, ext, correo) VALUES ('$data[0]','$data[1]','$data[2]','$data[3]','$data[4]')";
+                        $sql = "INSERT IGNORE INTO $table(nombres, area, cargo, ext, correo) VALUES (ltrim(rtrim('$data[0]'),ltrim(rtrim('$data[1]'),ltrim(rtrim('$data[2]'),ltrim(rtrim('$data[3]'),ltrim(rtrim('$data[4]')";
                         mysql_query($sql) or die('Error: '.mysql_error());
                         
                         $cont = $cont + 1;    
