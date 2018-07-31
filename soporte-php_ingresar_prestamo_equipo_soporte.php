@@ -86,6 +86,8 @@
         $mail->addAddress("$email_usuario", "$usuario_equipo");
         $mail->AddCC("$email_usuario_tecnico", "$usuario_tecnico");
         $mail->AddCC("coordinadorequipoinformatico@uninorte.edu.co", "Alvaro Ivan Santiago Arellana");
+        $mail->AddCC("comprasmantenimiento3@uninorte.edu.co", 'Compras Mantenimiento Uninorte 03');
+        $mail->AddCC("labmicros@uninorte.edu.co", 'Laboratorio Microcomputadores');
         $mail->AddCC($_SESSION['correo'], $_SESSION['nombre']);
         //Set the subject line
         $mail->Subject = 'Préstamo  de equipo de soporte activo:  ' . "$activo_equipo";

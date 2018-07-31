@@ -296,6 +296,7 @@ class Cliente
 			$mail->AddCC("$this->email_usuario_tecnico", "$this->usuario_tecnico");
 			$mail->AddCC("coordinadorequipoinformatico@uninorte.edu.co", 'Alvaro Ivan Santiago Arellana');
 			$mail->AddCC("comprasmantenimiento3@uninorte.edu.co", 'Compras Mantenimiento Uninorte 03');
+			$mail->AddCC("labmicros@uninorte.edu.co", 'Laboratorio Microcomputadores');
 			//Set the subject line
 			$mail->Subject = 'Devolución de equipo de soporte activo :' . "$this->activo_equipo" .' a bodega. ';
 			//Read an HTML message body from an external file, convert referenced images to embedded,
@@ -373,6 +374,7 @@ class Cliente
 			$mail->AddCC($_SESSION['correo'], $_SESSION['nombre']);
 			$mail->AddCC("coordinadorequipoinformatico@uninorte.edu.co", "Alvaro Ivan Santiago Arellana");
 			$mail->AddCC("egaliano@uninorte.edu.co", "Emma Beatriz Galiano Vargas");
+			$mail->AddCC("labmicros@uninorte.edu.co", 'Laboratorio Microcomputadores');
 			//Set the subject line
 			$mail->Subject = 'Aviso de recordatorio - Devolución del equipo de soporte o préstamo. Activo:'."$this->activo_equipo".' al Laboratorio de micros. ';
 			//Read an HTML message body from an external file, convert referenced images to embedded,
