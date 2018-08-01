@@ -450,13 +450,6 @@ include_once("menu.php");
 		    </div>
 	    </div>
 
-	    <div class="row">
-		    <div class="columns large-12">
-			    <label for="observaciones">Observaciones </label>
-			    <input type="text" name="observaciones" id="observaciones" value="" placeholder="Opcional">
-			</div>
-	    </div>
-
 	    <!-- ********************************************************** BOTONES ************************************************************* -->
 	    <div class="row">
 	        <div id="capa_btn_guardar_reubicado" class="columns large-2">
