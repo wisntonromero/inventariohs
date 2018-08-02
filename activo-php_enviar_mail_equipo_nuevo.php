@@ -89,7 +89,8 @@ $mail->Body = 	'Favor hacer reserva de ip a este equipo NUEVO 	: '."\r\n"."\r\n"
 				'Ubicación              : '. "$cubiculo". "\r\n" .
 				'Dirección ip sw        : '. "$dir_ip_sw". "\r\n" .
 				'Puerto en el sw        : '. "$puerto_sw". "\r\n" .
-				'Vlan Puerto en el sw   : '. "$vlan_puerto_sw". "\r\n" . "\r\n" .
+				'Vlan Puerto en el sw   : '. "$vlan_puerto_sw". "\r\n" .
+                'observaciones          : '. "$observaciones". "\r\n" . "\r\n" .
 				'Este E-mail es enviado automáticamente desde el sistema de inventario de equipos.' ;
 //Attach an image file
 //$mail->addAttachment('images/phpmailer_mini.png');
