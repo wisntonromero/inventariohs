@@ -68,6 +68,7 @@
         //Set who the message is to be sent to
         $mail->addAddress("$correo", "$cliente");
         $mail->AddCC("weromero@uninorte.edu.co", "Winston Elias Romero Duarte");
+        $mail->AddCC($_SESSION['correo'], $_SESSION['nombre']);
         //Set the subject line
         $mail->Subject = 'Prestamo de llaves para ingreso al :  ' . "$descripcion_cc";
         //Read an HTML message body from an external file, convert referenced images to embedded,

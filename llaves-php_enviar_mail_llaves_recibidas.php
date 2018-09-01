@@ -58,6 +58,7 @@
             $mail->addAddress("$this->correo", "$this->nomcliente");
             //$mail->addAddress("weromero@uninorte.edu.co", 'weromero@uninorte.edu.co');
             $mail->AddCC("weromero@uninorte.edu.co", "Winston Elias Romero Duarte");
+            $mail->AddCC($_SESSION['correo'], $_SESSION['nombre']);
             //Set the subject line
             $mail->Subject = 'Devolucion de llaves del :' . "$this->descripcion_cc" .' al Lab de micros ';
             //Read an HTML message body from an external file, convert referenced images to embedded,
